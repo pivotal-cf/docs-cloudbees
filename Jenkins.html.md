@@ -144,7 +144,7 @@ Please provide any bugs, feature requests, or questions to [the Pivotal CF Feedb
 
 ### Version
 
-This product is based on Cloudbees Jenkins Enterprise version 1.554.2.2.
+This product is based on Cloudbees Jenkins Enterprise version 1.554.10.1.
 
 ### Further Reading
 
