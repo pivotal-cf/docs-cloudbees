@@ -8,85 +8,83 @@ This is a guide on how to use CloudBees Jenkins Enterprise for Pivotal CF and in
 This guide will cover:
 
 1. Cloning an application from Github
-2. Testing using the ruby buildpack
+2. Testing using the Ruby buildpack
 3. Testing against a Redis service instance
 4. Configuring your CF installation
 5. Pushing your application
 
 ### Getting setup
-1. Log in to CloudBees at http://pivotal-cloudbees.your-cf-installation.com
-2. Click on `New item` on the left hand navigation menu
-3. Choose `Build a free-style software project` and give it a name such as `redis-test-build` and press `ok`
+1. Log in to CloudBees at `http://pivotal-cloudbees.your-cf-installation.com`.
+2. Click `New item` on the left hand navigation menu.
+3. Choose `Build a free-style software project`, give it a name, such as `redis-test-build`, and click `ok`.
 
 <%= image_tag("../images/step1.jpeg") %>
 
 ### Clone from Github
-We are going to use a provided [test application](https://github.com/pivotal-cf/cf-redis-example-app) for this demonstration, which is hosted on Github. 
+We are going to use a provided [test application](https://github.com/pivotal-cf/cf-redis-example-app) for this demonstration, which is hosted on Github.
 
-1. Under the `Source code management` heading click on the `Git` radio button
-2. In the path enter `https://github.com/pivotal-cf/cf-redis-example-app/`
+1. Under the `Source code management` heading, click the `Git` radio button.
+2. In the path, enter `https://github.com/pivotal-cf/cf-redis-example-app/`.
 
 <%= image_tag("../images/step2.jpeg") %>
 
 ### Adding a shell step
-The rest of the steps in this guide happen in a shell step. 
+The rest of the steps in this guide happen in a shell step.
 
-1. Under the `Build` heading, click on the dropdown menu `Add a build step`
-2. Select `Execute Shell`
+1. Under the `Build` heading, click the `Add a build step` drop down menu.
+2. Select `Execute Shell`.
 
 <%= image_tag("../images/step3.jpeg") %>
 
 #### Buildpacks
-In order to run your tests in an environment that mimics the Cloud Foundry runtime environment, you can use the same buildpacks
+In order to run your tests in an environment that mimics the Cloud Foundry runtime environment, you can use the same buildpacks:
 
 1. In the shell step add `. cf_buildpack` as the fist line
 
 Note:
 
-* It is important to add the `. ` fullstop and following space as the command is executed in a `sh` shell. 
+* It is important to add the `. ` fullstop and following space, as the command is executed in a `sh` shell.
 
 <%= image_tag("../images/step4.jpeg") %>
 
 #### Test Services
-You can create instances of the same services that you use in your development, staging and production environments to use for your tests. 
+You can create instances of the same services that you use in your development, staging, and production environments to use for your tests.
 
 Our test app uses Redis, so we'll create a test instance of this for use only in our tests.
 
-1. In the shell step below the previous line add `export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis"`
+1. In the shell step below the previous line, add `export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis"`
 2. Followed by `. test_service_instances` on another line
-3. Finally followed by `rspec`
+3. Finally followed by `rspec`.
 
 <%= image_tag("../images/step5.jpeg") %>
 
 #### Cloud Foundry CLI
-The CLI is provided for use in shell steps exactly the same as using it from your local machine. 
+The CLI is provided for use in shell steps exactly the same as using it from your local machine.
 
 1. Target your CF Installation with `cf api https://api.your-cf-installation.com --skip-ssl-validation`
-2. Login using your CF credentials and target your organisation and space with `cf login -u me -p password -o development -s development`
+2. Login using your CF credentials and target your organization and space with `cf login -u me -p password -o development -s development`
 
 <%= image_tag("../images/step6.jpeg") %>
 
 #### Pushing and binding your application
-These steps will create the service, push your application, bind to it and then restart. 
+These steps will create the service, push your application, bind to it and then restart.
 
-1. Create the `redis` service with `cf create-service p-redis development redis`. This command will fail gracefully if the service does already exist
-2. Push your application and do not start yet with `cf push redis-example-app --no-start`
-3. Bind your application to the service created in step 1 with `cf bind-service redis-example-app redis`
-4. Lastly restart your application to use the newly created bindings and environment variables `cf restart redis-example-app`
+1. Create the `redis` service with `cf create-service p-redis development redis`. This command will fail gracefully if the service does already exist.
+2. Push your application and do not start yet: `cf push redis-example-app --no-start`
+3. Bind your application to the service created in step 1: `cf bind-service redis-example-app redis`
+4. Restart your application to use the newly created bindings and environment variables: `cf restart redis-example-app`
 
 <%= image_tag("../images/step7.jpeg") %>
 
-Note:
-
-* An alternative to steps 2-4 above would be to add your service information into the `manifest.yml` file in the root of the sample application. This would replace these steps with `cf push redis-example-app`. [Manifest documentation](http://docs.run.pivotal.io/devguide/deploy-apps/manifest.html) 
+<p class="note"><strong>Note</strong>: An alternative to steps 2-4 above would be to add your service information into the <code>manifest.yml</code> file in the root of the sample application. This would replace these steps with <code>cf push redis-example-app</code>. For more information about manifests, see the <a href="http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html">Manifest documentation</a>.</p>
 
 ### Save & Build
-1. Press `save` at the bottom of the page
-2. On the left hand menu press `Build Now` your new build job will then appear below
+1. Click `save` at the bottom of the page.
+2. On the left hand menu, click `Build Now`. Your new build job will then appear below.
 
-<%= image_tag("../images/step8.jpeg") %>
+  <%= image_tag("../images/step8.jpeg") %>
 
-1. for more details click on the icon to the left of the number to see the console output
+For more details, click on the icon to the left of the number to see the console output.
 
 You will see output similar to the following:
 
@@ -256,16 +254,16 @@ instances: 1/1
 usage: 256M x 1 instances
 urls: redis-example-app.your-cf-installation.com
 
-     state     since                    cpu    memory          disk   
-#0   running   2014-10-02 04:28:05 PM   0.0%   32.5M of 256M   46M of 1G   
+     state     since                    cpu    memory          disk
+#0   running   2014-10-02 04:28:05 PM   0.0%   32.5M of 256M   46M of 1G
 + teardown_test_service_instances
 + set +ex
 Finished: SUCCESS
 ```
 
 ### Success!
-Visit the url mentioned above and you should see `Not found` which is the home page of our sample app!
+Visit the URL mentioned above and you should see `Not found`, which is the home page of our sample app!
 
 <%= image_tag("../images/step9.jpeg") %>
 
-For details on how to use the sample app visit the [Readme](https://github.com/pivotal-cf/cf-redis-example-app/blob/master/README.md).
+For details on how to use the sample app, visit the [Readme](https://github.com/pivotal-cf/cf-redis-example-app/blob/master/README.md).

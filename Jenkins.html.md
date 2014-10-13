@@ -11,7 +11,7 @@ Key features of the product are:
 * Integration with Cloud Foundry UAA for Single Sign On (SSO) support
 * Use of the same buildpacks as runtime to ensure consistency
 * Automatic provisioning of services instances for your tests
-* Ability to deploy to PCF using the CLI 
+* Ability to deploy to PCF using the CLI
 * Automatic master and slave configuration
 * Support for Gradle wrapper and Maven
 
@@ -19,12 +19,12 @@ Key features of the product are:
 
 To install CloudBees Jenkins Enterprise for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
 
-1. Download the product file from [Pivotal Network](https://network.pivotal.io/)
-1. Upload the product file to your Ops Manager installation
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
+1. Upload the product file to your Ops Manager installation.
 1. Click **Add** next to the uploaded product description in the Ops Manager `Available Products` view
-   to add this product to your staging area
-1. Click the newly added tile to review any configurable options
-1. Click **Apply Changes** to install the service
+   to add this product to your staging area.
+1. Click the newly added tile to review any configurable options.
+1. Click **Apply Changes** to install the service.
 
 This product requires Pivotal CF version 1.3 or greater.
 
@@ -32,47 +32,47 @@ This product requires Pivotal CF version 1.3 or greater.
 
 #### Licensing
 
-A trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user. 
+A trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user.
 
-The operator's machine currently requires an internet connection to facilitate obtaining the trial license. 
+The operator's machine currently requires an internet connection to facilitate obtaining the trial license.
 
-If you are accessing Ops Manager from a machine with internet access, a trial license will be automatically retrieved on the Jenkins `Register Jenkins` page. Otherwise you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise). 
+If you are accessing Ops Manager from a machine with internet access, a trial license will be automatically retrieved on the Jenkins `Register Jenkins` page. Otherwise you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
 
-Upon a trial license expiring, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration. 
+Upon a trial license expiring, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
 
 #### Installation Details
 
-Once installed, Jenkins is accessible via http://pivotal-cloudbees.your-cf-installation.com
+Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com`.
 
-By default the setup is configured as one Master, with one Slave instance. 
-This can be incremented in the `Resources` tab within the tile on Ops Manager. 
+By default the setup is configured as one Master, with one Slave instance.
+This can be incremented in the `Resources` tab within the tile on Ops Manager.
 
 #### Authorization
 
-Cloud Foundry users registered with UAA can log into Jenkins and create jobs, but they cannot edit the details of other users jobs. 
+Cloud Foundry users registered with UAA can log into Jenkins and create jobs, but they cannot edit the details of other users' jobs.
 
-To manage plugins and to access `Manage Jenkins` you need to log in as the UAA Administrator. The credentials can be obtained from the Elastic Runtime tile in Ops Manager. User access is managed through the UAA.
+To manage plugins and to access `Manage Jenkins`, log in as the UAA Administrator. The credentials can be obtained from the Elastic Runtime tile in Ops Manager. User access is managed through the UAA.
 
 ### Buildpacks and Services
 
-To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the same buildpacks and services as your Cloud Foundry environment.  
+To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the same buildpacks and services as your Cloud Foundry environment.
 
 #### Buildpacks
-To use the correct buildpack add the `. cf_buildpack` command into a shell step.
+To use the correct buildpack, add the `. cf_buildpack` command into a shell step.
 
-**Note:** the full stop is required as builds execute within the `sh` shell.
+<p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
 Currently supported buildpacks are Ruby, NodeJS, Java.
 
 #### Services
 
-An export statement is required for each service that you require, multiple services can be added if separated by commas. 
+An export statement is required for each service that you require. Multiple services can be added by separating them with commas.
 
-It takes the format of `service:plan:name` where `service` and `plan` can be obtained from the `cf marketplace` command and `name` from `cf services`.
+An export statement takes the format of `service:plan:name`, where `service` and `plan` can be obtained from the `cf marketplace` command and `name` from `cf services`.
 
-For example `export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis"` should be added into a shell step.
+For example, `export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis"` should be added into a shell step.
 
-Then specify `. test_service_instances`
+Then specify `. test_service_instances`.
 
 #### Full Example
 
@@ -84,13 +84,13 @@ rspec
 ```
 
 ### Cloud Foundry CLI
-The CF CLI is included via a plugin so that it is available to your Jenkins jobs. 
-In a shell step you can now use the same `cf` commands that you would directly from your machine, including being able to push an app. 
+The CF CLI is included via a plugin so that it is available to your Jenkins jobs.
+In a shell step you can now use the same `cf` commands that you would directly from your machine, including being able to push an app.
 
-The credentials for Cloud Foundry have to be specified in the shell step in order to connect to the api. 
+The credentials for Cloud Foundry have to be specified in the shell step in order to connect to the api.
 
 #### Example
-A basic example to authenticate and then push the app to your space would be 
+A basic example to authenticate and then push the app to your space would be:
 
 ```
 cf api https://api.your-cf-installation.com # add `--skip-ssl-validation` if needed
@@ -98,7 +98,7 @@ cf login -u me -p password -o development -s development
 cf push redis-example-app
 ```
 
-For more details on the CF CLI please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/installcf/whats-new-v6.html)
+For more details on the CF CLI, please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/installcf/whats-new-v6.html).
 
 ### Jenkins Plugins
 As part of the installation, we automatically install the following additional plugins:
@@ -109,23 +109,23 @@ As part of the installation, we automatically install the following additional p
 1. Gradle
 1. Create Job Advanced
 
-These plugins **cannot** be removed. 
+These plugins **cannot** be removed.
 
-There are no restrictions on installing any other plugins, including CloudBees Enterprise plugins and open source. 
-Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh. 
+There are no restrictions on installing any other plugins, including CloudBees Enterprise plugins and open source.
+Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh.
 
 ### Environment Architecture
 
 #### Masters
 By default we configure one Jenkins Master. You can increase this value in the `Resources` tab in Ops Manager.
-If you increase the number of Masters, you can configure them to be stand-by masters in `Configure Jenkins` this will provide high availability in the case of a master going offline, a standby master will assume control and jobs will continue to run. 
+If you increase the number of Masters, you can configure them to be stand-by masters in `Configure Jenkins` this will provide high availability in the case of a master going offline, a standby master will assume control and jobs will continue to run.
 
 #### Slaves
-By default we configure one Jenkins Slave. You can increase this value in the `Resources` tab in Ops Manager. 
+By default we configure one Jenkins Slave. You can increase this value in the `Resources` tab in Ops Manager.
 
 The more slaves you add, the more jobs you are able to run concurrently.
 
-You are also able to add in existing slaves from your infrastructure that are outside of PCF.  
+You are also able to add in existing slaves from your infrastructure that are outside of PCF.
 
 ### Known Limitations
 
@@ -133,7 +133,7 @@ Limitations with the current CloudBees Jenkins Enterprise for Pivotal CF product
 
 * Currently supported buildpacks are Java, Ruby, NodeJS
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
-* Test services are provisioned using the `jenkins` user, this requires this user to have access through the security groups to all of the possible test services that app developers will test against
+* Test services are provisioned using the `jenkins` user. This requires this user to have access through the security groups to all of the possible test services that app developers will test against.
 * Credentials for the CF CLI have to be passed in the shell step
 
 We hope to address all of these limitations in future releases.
