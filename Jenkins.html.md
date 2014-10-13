@@ -2,67 +2,67 @@
 title: CloudBees Jenkins Enterprise for Pivotal CF
 ---
 
-This is the documentation for the Cloudbees Jenkins Enterprise for Pivotal CF.
+This is the documentation for the CloudBees Jenkins Enterprise for Pivotal CF.
 
 ### Features
 
 Key features of the product are:
 
-* Integration with Cloudfoundry UAA for Single Sign On (SSO) support
+* Integration with Cloud Foundry UAA for Single Sign On (SSO) support
 * Use of the same buildpacks as runtime to ensure consistency
 * Automatic provisioning of services instances for your tests
 * Ability to deploy to PCF using the CLI 
-* Automatic master and slave configuration.
+* Automatic master and slave configuration
 * Support for Gradle wrapper and Maven
 
-### Install via Pivotal Operations Manager
+### Install via Pivotal Ops Manager
 
-To install Cloudbees Jenkins Enterprise for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
+To install CloudBees Jenkins Enterprise for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
 
-1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
-1. Upload the product file to your Ops Manager installation.
-1. Click **Add** next to the uploaded product description in the Available Products view
-   to add this product to your staging area.
-1. Click the newly added tile to review any configurable options.
-1. Click **Apply Changes** to install the service.
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/)
+1. Upload the product file to your Ops Manager installation
+1. Click **Add** next to the uploaded product description in the Ops Manager `Available Products` view
+   to add this product to your staging area
+1. Click the newly added tile to review any configurable options
+1. Click **Apply Changes** to install the service
 
 This product requires Pivotal CF version 1.3 or greater.
 
-### Licensing
+### Managing Jenkins
 
-A trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from Cloudbees. The enterprise licence can be updated in the `Manage Jenkins` section, whilst logged in as the UAA Admin user. 
+#### Licensing
 
-The operators machine currently requires an internet connection to facilitate obtaining the trial license. 
+A trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user. 
 
-If a trial licence cannot be obtained then you will be presented with the default `Register Jenkins` page where you will be able to input licence details, either a trial licence you have obtained yourself or your enterprise licence. 
+The operator's machine currently requires an internet connection to facilitate obtaining the trial license. 
 
-Upon a trial licence expiring, you will be presented with the `Register Jenkins` page where you can enter your updated licence details if you have not done this ahead of the expiration. 
+If you are accessing Ops Manager from a machine with internet access, a trial license will be automatically retrieved on the Jenkins `Register Jenkins` page. Otherwise you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise). 
 
-For an internet-less install, the trial licence can be copied onto the machine via a USB key with the support of CloudBees. 
+Upon a trial license expiring, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration. 
 
-### Installation Details
+#### Installation Details
 
 Once installed, Jenkins is accessible via http://pivotal-cloudbees.your-cf-installation.com
 
 By default the setup is configured as one Master, with one Slave instance. 
-This can be incremented in the `Resources` tab within the tile on OpsManager. 
+This can be incremented in the `Resources` tab within the tile on Ops Manager. 
 
-### Authorization
+#### Authorization
 
-To manage plugins and access `Manage Jenkins` you need to log in as the UAA Administrator, the credentials can be obtained from the Elastic Runtime tile in OpsManager. 
+Cloud Foundry users registered with UAA can log into Jenkins and create jobs, but they cannot see the details of other users jobs. 
 
-CloudFoundry users registered with UAA can log into Jenkins and create jobs, but they cannot see the details of other users jobs. 
+To manage plugins and to access `Manage Jenkins` you need to log in as the UAA Administrator. The credentials can be obtained from the Elastic Runtime tile in Ops Manager. User access is managed through the UAA.
 
 ### Buildpacks and Services
 
-To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the correct buildpacks and services that match the your environment.  
+To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the same buildpacks and services as your Cloud Foundry environment.  
 
 #### Buildpacks
-To use the correct buildpack add `. cf_buildpack` command into a shell step.
+To use the correct buildpack add the `. cf_buildpack` command into a shell step.
 
-**Note:** the full stop is required as its a `sh` shell.
+**Note:** the full stop is required as builds execute within the `sh` shell.
 
-Currently supported buildpacks are Ruby, NodeJS, Java
+Currently supported buildpacks are Ruby, NodeJS, Java.
 
 #### Services
 
@@ -84,7 +84,7 @@ rspec
 ```
 
 ### Cloud Foundry CLI
-The CF CLI is included via a plugin so that is is available to your Jenkins jobs. 
+The CF CLI is included via a plugin so that it is available to your Jenkins jobs. 
 In a shell step you can now use the same `cf` commands that you would directly from your machine, including being able to push an app. 
 
 The credentials for Cloud Foundry have to be specified in the shell step in order to connect to the api. 
@@ -93,17 +93,17 @@ The credentials for Cloud Foundry have to be specified in the shell step in orde
 A basic example to authenticate and then push the app to your space would be 
 
 ```
-cf api https://api.your-cf-installation.com --skip-ssl-validation
+cf api https://api.your-cf-installation.com # add `--skip-ssl-validation` if needed
 cf login -u me -p password -o development -s development
 cf push redis-example-app
 ```
 
 For more details on the CF CLI please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/installcf/whats-new-v6.html)
 
-### Plugins
+### Jenkins Plugins
 As part of the installation, we automatically install the following additional plugins:
 
-1. Cloudfoundry UAA
+1. Cloud Foundry UAA
 1. Subversion
 1. Syslog Logger
 1. Gradle
@@ -117,11 +117,11 @@ Any user installed plugins will be persisted after an upgrade or a restore of th
 ### Environment Architecture
 
 #### Masters
-By default we configure one Jenkins Masters. You can increase this value in the `Resources` tab in OpsManager.
+By default we configure one Jenkins Master. You can increase this value in the `Resources` tab in Ops Manager.
 If you increase the number of Masters, you can configure them to be stand-by masters in `Configure Jenkins` this will provide high availability in the case of a master going offline, a standby master will assume control and jobs will continue to run. 
 
 #### Slaves
-By default we configure one Jenkins Slave. You can increase this value in the `Resources` tab in OpsManager. 
+By default we configure one Jenkins Slave. You can increase this value in the `Resources` tab in Ops Manager. 
 
 The more slaves you add, the more jobs you are able to run concurrently.
 
@@ -129,11 +129,11 @@ You are also able to add in existing slaves from your infrastructure that are ou
 
 ### Known Limitations
 
-Limitations with the current Cloudbees Jenkins Enterprise for Pivotal CF product include:
+Limitations with the current CloudBees Jenkins Enterprise for Pivotal CF product include:
 
 * Currently supported buildpacks are Java, Ruby, NodeJS
-* The operators machine which is logged into OpsManager installing the tile, requires an internet connection to obtain the trial licence
-* Test services are provisioned using the `jenkins` user, this requires this user to have access through the security groups to all of the possible test services that app developers will test against. 
+* The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
+* Test services are provisioned using the `jenkins` user, this requires this user to have access through the security groups to all of the possible test services that app developers will test against
 * Credentials for the CF CLI have to be passed in the shell step
 
 We hope to address all of these limitations in future releases.
@@ -144,9 +144,9 @@ Please provide any bugs, feature requests, or questions to [the Pivotal CF Feedb
 
 ### Version
 
-This product is based on Cloudbees Jenkins Enterprise version 1.554.10.1.
+This product is based on CloudBees Jenkins Enterprise version 1.554.10.1.
 
 ### Further Reading
 
-* [Official Cloudbees Jenkins Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
+* [Official CloudBees Jenkins Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
 * [Jenkins Open Source](http://jenkins-ci.org/)

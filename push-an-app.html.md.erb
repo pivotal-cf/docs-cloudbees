@@ -16,12 +16,12 @@ This guide will cover:
 ### Getting setup
 1. Log in to CloudBees at http://pivotal-cloudbees.your-cf-installation.com
 2. Click on `New item` on the left hand navigation menu
-3. Choose `Build a free-style software project` and give it a name such as `redis-test-build` and press ok
+3. Choose `Build a free-style software project` and give it a name such as `redis-test-build` and press `ok`
 
 <%= image_tag("../images/step1.jpeg") %>
 
 ### Clone from Github
-We are going to use a [provided test application](https://github.com/pivotal-cf/cf-redis-example-app) for this demonstration, which is hosted on Github. 
+We are going to use a provided [test application](https://github.com/pivotal-cf/cf-redis-example-app) for this demonstration, which is hosted on Github. 
 
 1. Under the `Source code management` heading click on the `Git` radio button
 2. In the path enter `https://github.com/pivotal-cf/cf-redis-example-app/`
@@ -50,7 +50,7 @@ Note:
 #### Test Services
 You can create instances of the same services that you use in your development, staging and production environments to use for your tests. 
 
-Our test app uses Redis, so we'll create a test instance of this for use only in our tests
+Our test app uses Redis, so we'll create a test instance of this for use only in our tests.
 
 1. In the shell step below the previous line add `export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis"`
 2. Followed by `. test_service_instances` on another line
@@ -58,7 +58,7 @@ Our test app uses Redis, so we'll create a test instance of this for use only in
 
 <%= image_tag("../images/step5.jpeg") %>
 
-#### CloudFoundry CLI
+#### Cloud Foundry CLI
 The CLI is provided for use in shell steps exactly the same as using it from your local machine. 
 
 1. Target your CF Installation with `cf api https://api.your-cf-installation.com --skip-ssl-validation`
@@ -88,7 +88,7 @@ Note:
 
 1. for more details click on the icon to the left of the number to see the console output
 
-You will see output similar to the below
+You will see output similar to the following:
 
 ```
 + . cf_buildpack
@@ -268,4 +268,4 @@ Visit the url mentioned above and you should see `Not found` which is the home p
 
 <%= image_tag("../images/step9.jpeg") %>
 
-For details on how to use the sample app [visit the Readme](https://github.com/pivotal-cf/cf-redis-example-app/blob/master/README.md)
+For details on how to use the sample app visit the [Readme](https://github.com/pivotal-cf/cf-redis-example-app/blob/master/README.md).
