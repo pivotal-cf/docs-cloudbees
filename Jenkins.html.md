@@ -49,7 +49,7 @@ This can be incremented in the `Resources` tab within the tile on Ops Manager.
 
 #### Authorization
 
-Cloud Foundry users registered with UAA can log into Jenkins and create jobs, but they cannot see the details of other users jobs. 
+Cloud Foundry users registered with UAA can log into Jenkins and create jobs, but they cannot edit the details of other users jobs. 
 
 To manage plugins and to access `Manage Jenkins` you need to log in as the UAA Administrator. The credentials can be obtained from the Elastic Runtime tile in Ops Manager. User access is managed through the UAA.
 
