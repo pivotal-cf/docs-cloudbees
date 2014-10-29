@@ -62,9 +62,10 @@ To use the correct buildpack, add the `. cf_buildpack` command into a shell step
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
-Currently supported buildpacks are Ruby, NodeJS, Java.
+Currently supported buildpacks are Ruby and NodeJS. 
 
 #### Services
+This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests. 
 
 An export statement is required for each service that you require. Multiple services can be added by separating them with commas.
 
@@ -114,6 +115,11 @@ These plugins **cannot** be removed.
 There are no restrictions on installing any other plugins, including CloudBees Enterprise plugins and open source.
 Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh.
 
+#### Gradle Wrapper
+We recommend that you use `Gradle Wrapper` in your application. 
+
+When building your application, unless specified otherwise the generated file will be named after your **Jenkins job** and placed into **/build/libs/**
+
 ### Environment Architecture
 
 #### Masters
@@ -131,7 +137,7 @@ You are also able to add in existing slaves from your infrastructure that are ou
 
 Limitations with the current CloudBees Jenkins Enterprise for Pivotal CF product include:
 
-* Currently supported buildpacks are Java, Ruby, NodeJS
+* Currently supported buildpacks are Ruby and NodeJS
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
 * Test services are provisioned using the `jenkins` user. This requires this user to have access through the security groups to all of the possible test services that app developers will test against.
 * Credentials for the CF CLI have to be passed in the shell step

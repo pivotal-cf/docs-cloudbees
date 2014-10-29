@@ -4,6 +4,11 @@ title: CloudBees Jenkins Enterprise for Pivotal CF
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal CF
 
+### 1.3.3
+Features included in this release:
+
+* Bug fix for `/tmp` space errors on `slave nodes`
+
 ### 1.3.2
 
 Features included in this release:
