@@ -32,13 +32,15 @@ This product requires Pivotal CF version 1.3 or greater.
 
 #### Licensing
 
-A trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user.
+A trial license will be created when the product is installed, which is valid for **30 days**. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user.
 
-The operator's machine currently requires an internet connection to facilitate obtaining the trial license.
+The operator's machine that is accessing the CloudBees Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
 
-If you are accessing Ops Manager from a machine with internet access, a trial license will be automatically retrieved on the Jenkins `Register Jenkins` page. Otherwise you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
+If you are accessing CloudBees Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the `Register Jenkins` page. 
 
-Upon a trial license expiring, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
+If you are accessing CloudBees Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
+
+Upon a trial license expiring after **30 days**, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
 
 #### Installation Details
 
