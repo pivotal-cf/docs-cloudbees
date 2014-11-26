@@ -21,26 +21,25 @@ To install CloudBees Jenkins Enterprise for Pivotal CF, follow the procedure for
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
-1. Click **Add** next to the uploaded product description in the Ops Manager `Available Products` view
-   to add this product to your staging area.
+1. Click **Add** next to the uploaded product description in the Ops Manager `Available Products` view to add this product to your staging area.
 1. Click the newly added tile to review any configurable options.
 1. Click **Apply Changes** to install the service.
 
 ### Dependencies
 This product requires Pivotal CF:
 
-* Elastic Runtime version 1.3 or greater.
+* Elastic Runtime version 1.3 or greater
 * Ops Manager version 1.3 or greater
 
 ### Managing Jenkins
 
 #### Licensing
 
-A trial license will be created when the product is installed, which is valid for **30 days**. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. The enterprise license can be updated in the Jenkins `Manage Jenkins` section, whilst logged in as the UAA Admin user.
+A trial license will be created when the product is installed, which is valid for **30 days**. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. You can update the enterprise license in the Jenkins `Manage Jenkins` section when logged in as the UAA Admin user.
 
 The operator's machine that is accessing the CloudBees Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
 
-If you are accessing CloudBees Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the `Register Jenkins` page. 
+If you are accessing CloudBees Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the `Register Jenkins` page.
 
 If you are accessing CloudBees Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
 
@@ -68,10 +67,10 @@ To use the correct buildpack, add the `. cf_buildpack` command into a shell step
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
-Currently supported buildpacks are Ruby and NodeJS. 
+Currently supported buildpacks are Ruby and NodeJS.
 
 #### Services
-This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests. 
+This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests.
 
 An export statement is required for each service that you require. Multiple services can be added by separating them with commas.
 
@@ -122,7 +121,7 @@ There are no restrictions on installing any other plugins, including CloudBees E
 Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh.
 
 #### Gradle Wrapper
-We recommend that you use `Gradle Wrapper` in your application. 
+We recommend that you use `Gradle Wrapper` in your application.
 
 When building your application, unless specified otherwise the generated file will be named after your **Jenkins job** and placed into **/build/libs/**
 
