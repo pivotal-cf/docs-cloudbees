@@ -26,7 +26,11 @@ To install CloudBees Jenkins Enterprise for Pivotal CF, follow the procedure for
 1. Click the newly added tile to review any configurable options.
 1. Click **Apply Changes** to install the service.
 
-This product requires Pivotal CF version 1.3 or greater.
+### Dependencies
+This product requires Pivotal CF:
+
+* Elastic Runtime version 1.3 or greater.
+* Ops Manager version 1.3 or greater
 
 ### Managing Jenkins
 
