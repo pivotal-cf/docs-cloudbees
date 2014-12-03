@@ -1,8 +1,8 @@
 ---
-title: CloudBees Jenkins Enterprise for Pivotal CF
+title: Jenkins Enterprise by CloudBees for Pivotal CF
 ---
 
-This is the documentation for the CloudBees Jenkins Enterprise for Pivotal CF.
+This is the documentation for the Jenkins Enterprise by CloudBees for Pivotal CF.
 
 ### Features
 
@@ -17,7 +17,7 @@ Key features of the product are:
 
 ### Install via Pivotal Ops Manager
 
-To install CloudBees Jenkins Enterprise for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
+To install Jenkins Enterprise by CloudBees for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -37,11 +37,11 @@ This product requires Pivotal CF:
 
 A trial license will be created when the product is installed, which is valid for **30 days**. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. You can update the enterprise license in the Jenkins `Manage Jenkins` section when logged in as the UAA Admin user.
 
-The operator's machine that is accessing the CloudBees Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
+The operator's machine that is accessing the Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
 
-If you are accessing CloudBees Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the `Register Jenkins` page.
+If you are accessing Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the `Register Jenkins` page.
 
-If you are accessing CloudBees Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
+If you are accessing Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
 
 Upon a trial license expiring after **30 days**, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
 
@@ -140,7 +140,7 @@ You are also able to add in existing slaves from your infrastructure that are ou
 
 ### Known Limitations
 
-Limitations with the current CloudBees Jenkins Enterprise for Pivotal CF product include:
+Limitations with the current Jenkins Enterprise by CloudBees for Pivotal CF product include:
 
 * Currently supported buildpacks are Ruby and NodeJS
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
@@ -155,9 +155,9 @@ Please provide any bugs, feature requests, or questions to [the Pivotal CF Feedb
 
 ### Version
 
-This product is based on CloudBees Jenkins Enterprise version 1.554.10.1.
+This product is based on Jenkins Enterprise by CloudBees version 1.554.10.1.
 
 ### Further Reading
 
-* [Official CloudBees Jenkins Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
+* [Official Jenkins Enterprise by CloudBees Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
 * [Jenkins Open Source](http://jenkins-ci.org/)

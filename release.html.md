@@ -1,8 +1,8 @@
 ---
-title: CloudBees Jenkins Enterprise for Pivotal CF
+title: Jenkins Enterprise by CloudBees for Pivotal CF
 ---
 
-Release notes for CloudBees Jenkins Enterprise for Pivotal CF
+Release notes for Jenkins Enterprise by CloudBees for Pivotal CF
 
 ### 1.3.3
 Features included in this release:
