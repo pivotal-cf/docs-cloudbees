@@ -4,12 +4,29 @@ title: Jenkins Enterprise by CloudBees for Pivotal CF
 
 Release notes for Jenkins Enterprise by CloudBees for Pivotal CF
 
+### 1.3.5
+**Release Date: 30th January 2015**
+
+Features included in this release:
+
+* Updated stemcell to 2824 to resolve [CVE-2015-0235 Ghost](http://www.pivotal.io/security/cve-2015-0235)
+
+### 1.3.4
+**Release Date: 17th December 2014**
+
+Features included in this release:
+
+* Updated version of Ruby to resolve CVE-2014-8080
+
 ### 1.3.3
+**Release Date: 21st November 2014**
+
 Features included in this release:
 
 * Bug fix for `/tmp` space errors on `slave nodes`
 
 ### 1.3.2
+**Release Date: 13th October 2014**
 
 Features included in this release:
 
