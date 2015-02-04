@@ -3,7 +3,8 @@ title: Jenkins Enterprise by CloudBees for Pivotal CF
 ---
 
 # Resource requirements
-These are the default resource and IP requirements for installing the tile
+The following table shows the default resource and IP requirements for installing the tile:
+
 <table border="1" class="nice">
 	<tr>
 		<th>Product</th>
@@ -73,5 +74,5 @@ These are the default resource and IP requirements for installing the tile
 </table>
 
 #### Notes:
-* You can scale out the number of `Jenkins Slaves` in order to run more build jobs
-* Increasing the instance count for `Jenkins Master` doesn't give you High Availability
+* You can scale out the number of `Jenkins Slaves` in order to run more build jobs.
+* Increasing the instance count for `Jenkins Master` does not give you High Availability.
