@@ -4,6 +4,13 @@ title: Jenkins Enterprise by CloudBees for Pivotal CF
 
 Release notes for Jenkins Enterprise by CloudBees for Pivotal CF
 
+### 1.3.6
+**Release Date: 25th February 2015**
+
+Features included in this release:
+
+* Updated Jenkins Enterprise by CloudBees to [14.11 / 1.580](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.1.1)
+
 ### 1.3.5
 **Release Date: 30th January 2015**
 
