@@ -1,8 +1,8 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: Jenkins Enterprise by CloudBees for PCF
 ---
 
-This is the documentation for the Jenkins Enterprise by CloudBees for Pivotal CF.
+This is the documentation for the Jenkins Enterprise by CloudBees for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ### Features
 
@@ -17,7 +17,7 @@ Key features of the product are:
 
 ### Install via Pivotal Ops Manager
 
-To install Jenkins Enterprise by CloudBees for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
+To install Jenkins Enterprise by CloudBees for PCF, follow the procedure for installing Pivotal Ops Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -26,7 +26,7 @@ To install Jenkins Enterprise by CloudBees for Pivotal CF, follow the procedure 
 1. Click **Apply Changes** to install the service.
 
 ### Dependencies
-This product requires Pivotal CF:
+This product requires Pivotal Cloud Foundry:
 
 * Elastic Runtime version 1.3 or greater
 * Ops Manager version 1.3 or greater
@@ -140,7 +140,7 @@ You are also able to add in existing slaves from your infrastructure that are ou
 
 ### Known Limitations
 
-Limitations with the current Jenkins Enterprise by CloudBees for Pivotal CF product include:
+Limitations with the current Jenkins Enterprise by CloudBees for PCF product include:
 
 * Currently supported buildpacks are Ruby and NodeJS
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
@@ -151,7 +151,7 @@ We hope to address all of these limitations in future releases.
 
 ### Feedback
 
-Please provide any bugs, feature requests, or questions to [the Pivotal CF Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
+Please provide any bugs, feature requests, or questions to [the Pivotal Cloud Foundry Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
 
 ### Version
 

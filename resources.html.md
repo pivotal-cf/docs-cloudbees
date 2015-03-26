@@ -1,5 +1,5 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: Jenkins Enterprise by CloudBees for PCF
 ---
 
 # Resource requirements

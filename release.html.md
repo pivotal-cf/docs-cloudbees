@@ -1,8 +1,8 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: Jenkins Enterprise by CloudBees for PCF
 ---
 
-Release notes for Jenkins Enterprise by CloudBees for Pivotal CF
+Release notes for Jenkins Enterprise by CloudBees for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf)
 
 ### 1.3.7
 **Release Date: 3rd March 2015**
@@ -55,7 +55,7 @@ Features included in this release:
 #### Upgrading from 1.3.0.0.alpha.107
 If you installed the beta release 1.3.0.0.alpha.107, you can upgrade to 1.3.2 following these steps:
 
-1. In Ops Manager, click the `CloudBees Jenkins for Pivotal CF` tile.
+1. In Ops Manager, click the `CloudBees Jenkins for PCF` tile.
 2. Click `Resource Config` on the left hand menu.
 3. Change the `Jenkins Slave` - `Ephemeral Disk` size to be a minimum of `8192`.
 4. Click `Save`.
