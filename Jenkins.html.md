@@ -4,6 +4,11 @@ title: Jenkins Enterprise by CloudBees for Pivotal CF
 
 This is the documentation for the Jenkins Enterprise by CloudBees for Pivotal CF.
 
+### Installation on PCF Ops Manager 1.4 for AWS
+
+* Use the AWS Xen-HVM Ubuntu Trusty 2840 stemcell: [light-bosh-stemcell-2840-aws-xen-hvm-ubuntu-trusty-go_agent](https://s3.amazonaws.com/bosh-jenkins-artifacts/bosh-stemcell/aws/light-bosh-stemcell-2840-aws-xen-hvm-ubuntu-trusty-go_agent.tgz).
+* In "Settings / Resource Config", increase the Ephemeral Disk of the Compilation jobs to 16384 MB and ensure that the instance type of these Compilation jobs is at least c4.large.
+
 ### Features
 
 Key features of the product are:
