@@ -1,9 +1,9 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: Continuous Delivery for Ruby with CloudBees Jenkins Enterprise
 ---
 
 ### Introduction
-This is a guide on how to use Jenkins Enterprise by CloudBees for Pivotal CF and integrate with your Cloud Foundry installation.
+This is a guide on how to use CloudBees Jenkins Enterprise for Pivotal Cloud Foundry and integrate with your Cloud Foundry installation.
 
 This guide will cover:
 
@@ -60,9 +60,13 @@ Our test app uses Redis, so we'll create a test instance of this for use only in
 
 #### Cloud Foundry CLI
 The CLI is provided for use in shell steps exactly the same as using it from your local machine.
+Under `Build Environment` check `Set up Cloud Foundry CLI`
 
-1. Target your CF Installation with `cf api https://api.your-cf-installation.com --skip-ssl-validation`
-2. Login using your CF credentials and target your organization and space with `cf login -u me -p password -o development -s development`
+* **API EndPoint**: `api.your-cf-installation.com/`
+* **Skip ssl Validation**: checked
+* **API Credentials**: select your PCF/UAA Credentials (CloudFoundry CLI credentials may only be configured at the folder-level, see 'credentials' section for more details )
+* **Organization**: the organization you belong to on PCF
+* **Space**: the space of your organization in which you would like to deploy the application
 
 <%= image_tag("../images/step6.jpeg") %>
 
@@ -84,9 +88,6 @@ These steps will create the service, push your application, bind to it and then 
 export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis”<br>
 . test_service_instances<br>
 rspec<br>
-<br>
-cf api https://api.your-cf-installation.com --skip-ssl-validation<br>
-cf login -u me -p password -o development -s development<br>
 <br>
 cf create-service p-redis development redis<br>
 cf push redis-example-app —no-start<br>
@@ -174,26 +175,7 @@ Not starting local redis-server, using the one defined in VCAP_SERVICES
 
 Finished in 0.50111 seconds (files took 0.54346 seconds to load)
 15 examples, 0 failures
-+ cf api https://api.your-cf-installation.com --skip-ssl-validation
-Setting api endpoint to https://api.your-cf-installation.com...
-OK
 
-API endpoint: https://api.your-cf-installation.com (API version: 2.13.0)
-Not logged in. Use 'cf login' to log in.
-+ cf login -u me -p password -o development -s development
-API endpoint: https://api.your-cf-installation.com
-Authenticating...
-OK
-
-Targeted org development
-
-Targeted space development
-
-
-API endpoint: https://api.your-cf-installation.com (API version: 2.13.0)
-User:         me
-Org:          development
-Space:        development
 + cf create-service p-redis development redis
 Creating service redis in org development / space development as me...
 OK

@@ -1,29 +1,48 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
-Release notes for Jenkins Enterprise by CloudBees for Pivotal CF
+Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
+
+### 14.11.01.03
+
+**Release Date: 19th June 2015**
+
+Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
+
+* Security
+   * Authentication: load CF Organizations as Jenkins groups in the Cloud Foundry UAA Authentiction plugin
+   * Change the default authorization model to use [CloudBees RBAC](https://www.cloudbees.com/products/jenkins-enterprise/plugins/role-based-access-control-plugin). By default, the created jobs are isolated by Cloud Foundry Organizations or by user.
+* Tools 
+   * Upgrade the bundled JDK to OpenJDK 8 to match Pivotal Elastic Runtime 1.4 environment
+   * Bump Cloud Foundry CLI version to 6.11
+* Plugins
+   * Bundle the [Cloud Foundry CLI plugin](http://documentation.cloudbees.com/docs/cje-user-guide/cloudfoundry-cli.html) to ease integration of Jenkins jobs with Pivotal Elastic Runtime
+   * Bundle the [Jenkins Artifactory](https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin)
+* Configuration
+   * Refactor Jenkins auto-configuration procedure to rely on Groovy init scripts
+   * Better ability during platform upgrades to merge user defined configuration with configuration provided by the deployments on Pivotal Cloud Foundry (JVM, slaves, tool installations...)
 
 ### 1.3.8
 **Release Date: 1st April 2015**
 
 Features included in this release:
 
-* Updated Jenkins Enterprise by CloudBees to [14.11 / 1.580.13.1](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.13.1) to provide security fixes for SECURITY-171, SECURITY-177 and SECURITY-180. See [Jenkins Security Advisory 2015-03-23](https://www.cloudbees.com/jenkins-security-advisory-2015-03-23)
+* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.13.1](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.13.1) to provide security fixes for SECURITY-171, SECURITY-177 and SECURITY-180. See [Jenkins Security Advisory 2015-03-23](https://www.cloudbees.com/jenkins-security-advisory-2015-03-23)
 
 ### 1.3.7
 **Release Date: 3rd March 2015**
 
 Features included in this release:
 
-* Updated Jenkins Enterprise by CloudBees to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166 and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27)
+* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166 and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27)
 
 ### 1.3.6
 **Release Date: 25th February 2015**
 
 Features included in this release:
 
-* Updated Jenkins Enterprise by CloudBees to [14.11 / 1.580](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.1.1)
+* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.1.1)
 
 ### 1.3.5
 **Release Date: 30th January 2015**
@@ -62,7 +81,7 @@ Features included in this release:
 #### Upgrading from 1.3.0.0.alpha.107
 If you installed the beta release 1.3.0.0.alpha.107, you can upgrade to 1.3.2 following these steps:
 
-1. In Ops Manager, click the `CloudBees Jenkins for Pivotal CF` tile.
+1. In Ops Manager, click the `CloudBees Jenkins for Pivotal Cloud Foundry` tile.
 2. Click `Resource Config` on the left hand menu.
 3. Change the `Jenkins Slave` - `Ephemeral Disk` size to be a minimum of `8192`.
 4. Click `Save`.

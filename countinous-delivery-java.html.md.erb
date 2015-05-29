@@ -1,0 +1,82 @@
+---
+title: Continuous Delivery for Java with CloudBees Jenkins Enterprise
+---
+### Introduction
+This is a guide on how to use CloudBees Jenkins Enterprise for Pivotal Cloud Foundry and integrate with your Cloud Foundry installation.
+
+This guide will cover:
+
+1. Cloning an application from Github
+2. Building your Java application
+5. Pushing your application to Cloud Foundry Elastic Runtime
+
+
+###  Create the Initial Build Job
+
+* Navigate to the Jenkins Home and access the folder belonging to your user or organization.
+
+* Click `new item`, give it a name and select `Build a Maven project` Then click `OK`.
+
+* Under `Source Code Management`, select `Git`, and supply your repository URL and credentials
+  * this documentation is written using as example the Spring Petclinic Application that you can find at `https://github.com/CloudBees-community/spring-petclinic.git`
+
+  ![CF CLI Configuration Section]
+  <%= image_tag("../images/cd-cf-github.png") %>
+
+* Under `Build Triggers`, select `Build when a change is pushed to GitHub`
+
+* Under `Build Environment` check `Set up Cloud Foundry CLI`
+  * **API EndPoint**: `api.your-cf-installation.com/`
+  * **Skip ssl Validation**: checked
+  * **API Credentials**: select your PCF/UAA Credentials (CloudFoundry CLI credentials may only be configured at the folder-level, see 'credentials' section for more details )
+  * **Organization**: the organization you belong to on PCF
+  * **Space**: the space of your organization in which you would like to deploy the application
+  
+  ![CF CLI Configuration Section]
+  <%= image_tag("../images/cd-cf-cli.png") %>
+
+* In the Build section insert `package` as goal
+
+* Under `Post Steps`, add a `Execute Shell` post build step and insert:
+    `cf push petclinic -p target/petclinic.war`
+
+  ![CF CLI Configuration Section]
+  <%= image_tag("../images/cd-cf-build.png") %>
+
+* Save the config and try running the build by clicking ``Build Now''.
+
+###  Managing the Deployed Application
+
+After executing the job, the application will be deployed in your Elastic Runtime environment (`https://console.your-cf-installation.com/`), in the organisation and space defined in the CF CLI configuration section.
+
+![Elastic Runtime Console]
+  <%= image_tag("../images/cd-cf-elastic-1.png") %>
+
+ From the Pivotal Cloud Foundry Elastic Runtime Console Page you can scale, manage and monitor your application.
+
+
+![Elastic Runtime Console]
+  <%= image_tag("../images/cd-cf-elastic.png") %>
+
+###  Github Set Up
+
+Both the Github plugin and git are already installed in your Jenkins instance. You will only need to specify the url of the project you want to build and deploy and the Github credentials to be used (in the specific case of this tutorial no github credentials are needed): note that github credentials may only  be specified at folder level.
+
+###  Credentials Set Up
+
+Only Administrators have the permission to create global credentials. 
+For this reason, in the job configuration page (when setting up the i.e. git project, CF CLI, ...) the `Add` Credentials Button is disabled to the user. 
+However, a simple user the user can still create credentials at folder level i.e. in any of the job parent folder. 
+The procedure is quite straightforward:
+ 
+* Access the folder where you want to configure the credentials (i.e. CloudBees folder) and click on `Configure`
+
+ ![Folder Configuration]
+  <%= image_tag("../images/folder-configuration.png") %>
+
+* In the Credentials section click on `Add Credentials` and configured the desired credentials
+
+ ![Folder Configuration]
+  <%= image_tag("../images/folder-credentials.png") %>
+
+The credentials configured at this level will be accessible by all the jobs created in any of the child-folders of the current one.

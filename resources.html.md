@@ -1,5 +1,5 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
 # Resource requirements
@@ -22,8 +22,9 @@ The following table shows the default resource and IP requirements for installin
 	 	<td>Jenkins Master</td>
 	 	<td>1</td>
 	 	<td>2</td>
-	 	<td>2048</td><td>4096</td>
+	 	<td>2048</td>
 	 	<td>8192</td>
+	 	<td>100000</td>
 	 	<td>1</td>
 	 	<td>0</td>
  	</tr>
@@ -33,8 +34,8 @@ The following table shows the default resource and IP requirements for installin
  		<td>1</td>
  		<td>2</td>
  		<td>2048</td>
- 		<td>8192</td>
- 		<td>8192</td>
+ 		<td>100000</td>
+ 		<td>0</td>
  		<td>1</td>
  		<td>0</td>
  	</tr>
@@ -76,3 +77,4 @@ The following table shows the default resource and IP requirements for installin
 #### Notes:
 * You can scale out the number of `Jenkins Slaves` in order to run more build jobs.
 * Increasing the instance count for `Jenkins Master` does not give you High Availability.
+* if you upgrade the Jenkins Product on Pivotal Cloud Foundry from the older version (13.8), the persisent storage for the slaves won't be set to 0.

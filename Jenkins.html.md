@@ -1,8 +1,8 @@
 ---
-title: Jenkins Enterprise by CloudBees for Pivotal CF
+title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
-This is the documentation for the Jenkins Enterprise by CloudBees for Pivotal CF.
+This is the documentation for the CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
 
 ### Installation on PCF Ops Manager 1.4 for AWS
 
@@ -22,7 +22,7 @@ Key features of the product are:
 
 ### Install via Pivotal Ops Manager
 
-To install Jenkins Enterprise by CloudBees for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
+To install CloudBees Jenkins Enterprise for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -31,10 +31,10 @@ To install Jenkins Enterprise by CloudBees for Pivotal CF, follow the procedure 
 1. Click **Apply Changes** to install the service.
 
 ### Dependencies
-This product requires Pivotal CF:
+This product requires Pivotal Cloud Foundry:
 
-* Elastic Runtime version 1.3 or greater
-* Ops Manager version 1.3 or greater
+* Elastic Runtime version 1.4 or greater
+* Ops Manager version 1.4 or greater
 
 ### Managing Jenkins
 
@@ -52,10 +52,33 @@ Upon a trial license expiring after **30 days**, you will be presented with the 
 
 #### Installation Details
 
-Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com`.
-
 By default the setup is configured as one Master, with one Slave instance.
 This can be incremented in the `Resources` tab within the tile on Ops Manager.
+
+Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com` if you upgraded the Jenkins Product on Pivotal Cloud Foundry from an older version (13.8).
+
+If you directly install version 14.11, Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
+
+If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequentials values as the number of instances generated.
+
+i.e. if you install 3 masters, then the 3 instances can be accessed via:
+
+ 1. `http://jenkins-0.your-cf-installation.com`
+ 1. `http://jenkins-1.your-cf-installation.com`
+ 1. `http://jenkins-2.your-cf-installation.com`
+
+#### Configuration Details
+
+Jenkins will come pre-configured with:
+
+1. openjdk8
+1. git
+1. Maven 3
+1. CloudFoundry CLI
+1. buildpacks: ruby and nodejs
+
+You can modify the initial set-up simply editing the Jenkins Configuration Page. Please refer to the standard Jenkins and CJE documentation for further details.
+
 
 #### Authorization
 
@@ -72,7 +95,7 @@ To use the correct buildpack, add the `. cf_buildpack` command into a shell step
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
-Currently supported buildpacks are Ruby and NodeJS.
+Currently supported buildpacks are Ruby and NodeJS. However, even though the Java buildpack is not pre-installed, it is still possible to build and deliver java applications since all the necessary tools of the Java Buildpack are pre-installed and configured.
 
 #### Services
 This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests.
@@ -96,18 +119,12 @@ rspec
 
 ### Cloud Foundry CLI
 The CF CLI is included via a plugin so that it is available to your Jenkins jobs.
-In a shell step you can now use the same `cf` commands that you would directly from your machine, including being able to push an app.
+In a shell step you can now use the same `cf` commands that you would use directly from your machine.
 
-The credentials for Cloud Foundry have to be specified in the shell step in order to connect to the api.
+The credentials for Cloud Foundry will be set up in the plugin configuration section.
 
-#### Example
-A basic example to authenticate and then push the app to your space would be:
-
-```
-cf api https://api.your-cf-installation.com # add `--skip-ssl-validation` if needed
-cf login -u me -p password -o development -s development
-cf push redis-example-app
-```
+  ![CF CLI Configuration Section]
+  (/images/cd-cf-cli.png)
 
 For more details on the CF CLI, please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/installcf/whats-new-v6.html).
 
@@ -115,10 +132,14 @@ For more details on the CF CLI, please see the [documentation](http://docs.pivot
 As part of the installation, we automatically install the following additional plugins:
 
 1. Cloud Foundry UAA
+1. Cloud Foundry CLI
+1. Artifactory
+1. Mock Security Realm
+1. RBAC Autoconfigurer
 1. Subversion
+1. Github
 1. Syslog Logger
 1. Gradle
-1. Create Job Advanced
 
 These plugins **cannot** be removed.
 
@@ -141,13 +162,30 @@ By default we configure one Jenkins Slave. You can increase this value in the `R
 
 The more slaves you add, the more jobs you are able to run concurrently.
 
-You are also able to add in existing slaves from your infrastructure that are outside of PCF.
+You are also able to add in existing slaves from your infrastructure that are outside of PCF, which is recommended if you would like to add slaves with architecture different than Ubuntu Trusty.
+
+You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts. 
+
+####Managing the Topology from GUI
+
+From the Ops Manager GUI you can easily modify the number of slaves and Jenkins masters to be installed
+
+![Resource Configuration]
+  (/images/managing-topology.png)
+
+With this configuration, the 2 Jenkins instances will be available at:
+
+ 1. `http://jenkins-0.your-cf-installation.com` or `http://pivotal-cloudbees.your-cf-installation.com` (if you migrated from version 13.8)
+ 1. `http://jenkins-1.your-cf-installation.com`
+
+Each of them, will have 1 online and pre-configured slave attached.
+
 
 ### Known Limitations
 
-Limitations with the current Jenkins Enterprise by CloudBees for Pivotal CF product include:
+Limitations with the current CloudBees Jenkins Enterprise for Pivotal Cloud Foundry product include:
 
-* Currently supported buildpacks are Ruby and NodeJS
+* Currently supported buildpacks are Ruby and NodeJS (this DOES NOT mean that you can't build java application though, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
 * Test services are provisioned using the `jenkins` user. This requires this user to have access through the security groups to all of the possible test services that app developers will test against.
 * Credentials for the CF CLI have to be passed in the shell step
@@ -156,13 +194,13 @@ We hope to address all of these limitations in future releases.
 
 ### Feedback
 
-Please provide any bugs, feature requests, or questions to [the Pivotal CF Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
+Please provide any bugs, feature requests, or questions to [the Pivotal Cloud Foundry Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
 
 ### Version
 
-This product is based on Jenkins Enterprise by CloudBees version 1.554.10.1.
+This product is based on CloudBees Jenkins Enterprise version 1.554.10.1.
 
 ### Further Reading
 
-* [Official Jenkins Enterprise by CloudBees Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
+* [Official CloudBees Jenkins Enterprise Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
 * [Jenkins Open Source](http://jenkins-ci.org/)
