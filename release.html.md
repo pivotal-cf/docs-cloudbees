@@ -8,6 +8,12 @@ Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 **Release Date: 19th June 2015**
 
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry 14.11.01.03 includes a patch for
+the Cannonical Ubuntu CVE-2015-1328 security fix. This patch resolves an overlayfs privilege 
+escalation, which a local user could exploit to gain administrative privileges on the system. 
+Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry is running on 
+(2989) must be uploaded and installed along with this CloudBees Jenkins Enterprise release in Ops Manager.
+
 Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 * Security
