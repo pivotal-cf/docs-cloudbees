@@ -1,8 +1,8 @@
 ---
-title: Security: CloudBees Jenkins Enterprise integration with Pivotal Cloud Foundry
+title: Security-CloudBees Jenkins Enterprise integration with Pivotal Cloud Foundry
 ---
 
-### Introduction
+## Introduction
 This is a guide on how to use CloudBees Jenkins Enterprise security model integrates with Pivotal Cloud Foundry on your Cloud Foundry installation.
 
 This guide will cover:
@@ -18,7 +18,7 @@ The UAA is the identity management service for Cloud Foundry and acts a SSO serv
 
 ### Authorization: Cloud Foundry Authorization model based on organizations and spaces in Jenkins
 
-The Jenkins instance will come pre-configured with some Authorization settings that limit the read-write permission of the user to the CF organizations he belongs to. 
+The Jenkins instance will come pre-configured with some Authorization settings that limit the read-write permission of the user to the CF organizations he belongs to.
 For each logged-in user a folder will be automatically created (if does not exist yet) for each organization the user belongs to and an additional folder specific to the user: the latter will be only visible by the specific user, wherease the organization-folders will be shared across all the members of the same organizations.
 
 For example, an user belonging to the CF organization "cloudbees"
@@ -39,7 +39,7 @@ and will have access to the "cloudbees" folder and to the folder specific for hi
   <%= image_tag("../images/authorisation-1.png") %>
 
 
-Someone else belonging to the CF organization "pivotal" 
+Someone else belonging to the CF organization "pivotal"
 
   ![Authorization]
   <%= image_tag("../images/authorisation-2.2.png") %>
@@ -49,7 +49,7 @@ will belong to the matching external group "pivotal" in Jenkins
   ![Authorization]
   <%= image_tag("../images/authorisation-2.1.png") %>
 
-and will have access to the "pivotal" folder, plus to the folder specific for his user. 
+and will have access to the "pivotal" folder, plus to the folder specific for his user.
 
 
   ![Authorization]
@@ -75,7 +75,7 @@ and will be allowed to access all the existing Jenkins folders
 
 Members of the UAA group cloud_controller.admin` are granted the admin privileges in Jenkins and will be part of the `Administrator` group
 
-#### Troubleshooting: resetting the permissions
+### Troubleshooting: resetting the permissions
 
 Disable security as recommended in https://wiki.jenkins-ci.org/display/JENKINS/Disable+security
 
