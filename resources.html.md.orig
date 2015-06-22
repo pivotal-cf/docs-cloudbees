@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
+title: Jenkins Enterprise by CloudBees for PCF
+=======
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 ---
 
 # Resource requirements

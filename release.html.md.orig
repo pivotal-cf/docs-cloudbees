@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+title: Jenkins Enterprise by CloudBees for PCF
+---
+
+Release notes for Jenkins Enterprise by CloudBees for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf)
+=======
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
@@ -28,6 +34,7 @@ Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal C
 * Configuration
    * Refactor Jenkins auto-configuration procedure to rely on Groovy init scripts
    * Better ability during platform upgrades to merge user defined configuration with configuration provided by the deployments on Pivotal Cloud Foundry (JVM, slaves, tool installations...)
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 
 ### 1.3.8
 **Release Date: 1st April 2015**
@@ -41,7 +48,11 @@ Features included in this release:
 
 Features included in this release:
 
+<<<<<<< HEAD
+* Updated Jenkins Enterprise by CloudBees to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166, and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27)
+=======
 * Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166 and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27)
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 
 ### 1.3.6
 **Release Date: 25th February 2015**
@@ -87,7 +98,11 @@ Features included in this release:
 #### Upgrading from 1.3.0.0.alpha.107
 If you installed the beta release 1.3.0.0.alpha.107, you can upgrade to 1.3.2 following these steps:
 
+<<<<<<< HEAD
+1. In Ops Manager, click the `CloudBees Jenkins for PCF` tile.
+=======
 1. In Ops Manager, click the `CloudBees Jenkins for Pivotal Cloud Foundry` tile.
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 2. Click `Resource Config` on the left hand menu.
 3. Change the `Jenkins Slave` - `Ephemeral Disk` size to be a minimum of `8192`.
 4. Click `Save`.

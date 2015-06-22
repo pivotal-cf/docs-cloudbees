@@ -1,8 +1,15 @@
 ---
+<<<<<<< HEAD
+title: Jenkins Enterprise by CloudBees for PCF
+---
+
+This is the documentation for the Jenkins Enterprise by CloudBees for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
+=======
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
 This is the documentation for the CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 
 ### Installation on PCF Ops Manager 1.4 for AWS
 
@@ -22,7 +29,11 @@ Key features of the product are:
 
 ### Install via Pivotal Ops Manager
 
+<<<<<<< HEAD
+To install Jenkins Enterprise by CloudBees for PCF, follow the procedure for installing Pivotal Ops Manager tiles:
+=======
 To install CloudBees Jenkins Enterprise for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -183,7 +194,11 @@ Each of them, will have 1 online and pre-configured slave attached.
 
 ### Known Limitations
 
+<<<<<<< HEAD
+Limitations with the current Jenkins Enterprise by CloudBees for PCF product include:
+=======
 Limitations with the current CloudBees Jenkins Enterprise for Pivotal Cloud Foundry product include:
+>>>>>>> 610a90e7006ec51d5fce248e84032dba3a2f5054
 
 * Currently supported buildpacks are Ruby and NodeJS (this DOES NOT mean that you can't build java application though, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
