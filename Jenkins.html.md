@@ -4,11 +4,6 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 This is the documentation for the CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
 
-### Installation on PCF Ops Manager 1.4 for AWS
-
-* Use the AWS Xen-HVM Ubuntu Trusty 2840 stemcell: [light-bosh-stemcell-2840-aws-xen-hvm-ubuntu-trusty-go_agent](https://s3.amazonaws.com/bosh-jenkins-artifacts/bosh-stemcell/aws/light-bosh-stemcell-2840-aws-xen-hvm-ubuntu-trusty-go_agent.tgz).
-* In "Settings / Resource Config", increase the Ephemeral Disk of the Compilation jobs to 16384 MB and ensure that the instance type of these Compilation jobs is at least c4.large.
-
 ### Features
 
 Key features of the product are:
@@ -188,8 +183,6 @@ Limitations with the current CloudBees Jenkins Enterprise for Pivotal Cloud Foun
 * Currently supported buildpacks are Ruby and NodeJS (this DOES NOT mean that you can't build java application though, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
 * Test services are provisioned using the `jenkins` user. This requires this user to have access through the security groups to all of the possible test services that app developers will test against.
-* Credentials for the CF CLI have to be passed in the shell step
-
 We hope to address all of these limitations in future releases.
 
 ### Feedback
