@@ -15,6 +15,59 @@ Key features of the product are:
 * Automatic master and slave configuration
 * Support for Gradle wrapper and Maven
 
+## Product snapshot
+
+<dl>
+<dt>CloudBees Jenkins Enterprise for Pivotal Cloud Foundry Details</dt>
+<dd><strong>Version</strong>: 14.11.01.03 </dd>
+<dd><strong>Release Date</strong>: 19th June 2015</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins 1.554.10.1</dd>
+<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x</dd>
+<dd><strong>vSphere support?</strong> Yes</dd>
+<dd><strong>AWS support?</strong> Yes</dd>
+</dl>
+
+## Upgrading to the Latest Version
+
+Consider the following compatibility information before upgrading CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
+
+<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x, you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
+
+For more information, refer to the full Product Version Matrix.
+
+<table border="1" class="nice">
+<tr>
+  <th>Ops Manager Version</th>
+  <th>Supported Upgrades from Imported CloudBees Jenkins Enterprise Installation</th>
+</tr>
+<tr>
+  <th>1.3.x</th>
+  <td><ul>
+      <li>From 1.3.2 to 1.3.3, 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.3 to 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.4 to 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.5 to 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.6 to 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.7.2 to 1.3.8.3</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th>1.4.x</th>
+  <td><ul>
+      <li>From 1.3.2 to 14.11.01.03</li>
+      <li>From 1.3.3 to 14.11.01.03</li>
+      <li>From 1.3.4 to 14.11.01.03</li>
+      <li>From 1.3.5 to 14.11.01.03</li>
+      <li>From 1.3.6 to 14.11.01.03</li>
+      <li>From 1.3.7.2 to 14.11.01.03</li>
+      <li>From 1.3.8.3 to 14.11.01.03</li>
+    </ul>
+  </td>
+</tr>
+</table>
+
 ### Install via Pivotal Ops Manager
 
 To install CloudBees Jenkins Enterprise for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
@@ -159,7 +212,7 @@ The more slaves you add, the more jobs you are able to run concurrently.
 
 You are also able to add in existing slaves from your infrastructure that are outside of PCF, which is recommended if you would like to add slaves with architecture different than Ubuntu Trusty.
 
-You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts. 
+You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts.
 
 ####Managing the Topology from GUI
 
