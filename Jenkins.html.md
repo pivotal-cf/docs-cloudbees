@@ -2,18 +2,76 @@
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
-This is the documentation for the CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
+CloudBees Jenkins Enterprise can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy, the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration with common dependencies, languages and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies and new features are seamless and easy to install making the operators life easy.
+
+CloudBees Jenkins is tightly integrated into Pivotal Cloud Foundry to provide an enhanced application developer and workflow experience. Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests and easily create and bind to Pivotal Cloud Foundry service instances for integration testing.
+
+CloudBees Jenkins is integrated with UAA to provide single sign-on functionality for users, providing a seamless platform experience as well segregating builds by user and space for isolation and security. Applications can be easily deployed to Cloud Foundry, using a blue-green deployment strategy, upon a successful build using the integrated CLI plugin and credentials store.
 
 ### Features
 
 Key features of the product are:
 
-* Integration with Cloud Foundry UAA for Single Sign On (SSO) support
-* Use of the same buildpacks as runtime to ensure consistency
-* Automatic provisioning of services instances for your tests
-* Ability to deploy to PCF using the CLI
-* Automatic master and slave configuration
-* Support for Gradle wrapper and Maven
+* [Integration with Cloud Foundry UAA for Single Sign On (SSO) support](http://docs.pivotal.io/cloudbees/security.html)
+* [Isolation of builds by user and Cloud Foundry space](http://docs.pivotal.io/cloudbees/security.html)
+* [Use of the same buildpacks as runtime to ensure consistency for Ruby & NodeJS](#buildpacks)
+* [Automatic provisioning of services instances for your tests](#services)
+* [Seamless deployment to Cloud Foundry using the integrated CLI](#cli)
+* [Automatic master and slave configuration](#topology)
+* [Support for Gradle wrapper and Maven](#gradle)
+
+## Product snapshot
+
+<dl>
+<dt>CloudBees Jenkins Enterprise for Pivotal Cloud Foundry Details</dt>
+<dd><strong>Version</strong>: 14.11.01.03 </dd>
+<dd><strong>Release Date</strong>: 19th June 2015</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins 1.554.10.1</dd>
+<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x</dd>
+<dd><strong>vSphere support?</strong> Yes</dd>
+<dd><strong>AWS support?</strong> Yes</dd>
+</dl>
+
+### Upgrading to the Latest Version
+
+Consider the following compatibility information before upgrading CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
+
+<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x, you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
+
+For more information, refer to the full Product Version Matrix.
+
+<table border="1" class="nice">
+<tr>
+  <th>Ops Manager Version</th>
+  <th>Supported Upgrades from Imported CloudBees Jenkins Enterprise Installation</th>
+</tr>
+<tr>
+  <th>1.3.x</th>
+  <td><ul>
+      <li>From 1.3.2 to 1.3.3, 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.3 to 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.4 to 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.5 to 1.3.6, 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.6 to 1.3.7.2, 1.3.8.3</li>
+      <li>From 1.3.7.2 to 1.3.8.3</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th>1.4.x</th>
+  <td><ul>
+      <li>From 1.3.2 to 14.11.01.03</li>
+      <li>From 1.3.3 to 14.11.01.03</li>
+      <li>From 1.3.4 to 14.11.01.03</li>
+      <li>From 1.3.5 to 14.11.01.03</li>
+      <li>From 1.3.6 to 14.11.01.03</li>
+      <li>From 1.3.7.2 to 14.11.01.03</li>
+      <li>From 1.3.8.3 to 14.11.01.03</li>
+    </ul>
+  </td>
+</tr>
+</table>
 
 ### Install via Pivotal Ops Manager
 
@@ -85,14 +143,14 @@ To manage plugins and to access `Manage Jenkins`, log in as the UAA Administrato
 
 To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the same buildpacks and services as your Cloud Foundry environment.
 
-#### Buildpacks
+#### <a name="buildpacks"></a>Buildpacks
 To use the correct buildpack, add the `. cf_buildpack` command into a shell step.
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
 Currently supported buildpacks are Ruby and NodeJS. However, even though the Java buildpack is not pre-installed, it is still possible to build and deliver java applications since all the necessary tools of the Java Buildpack are pre-installed and configured.
 
-#### Services
+#### <a name="services"></a>Services
 This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests.
 
 An export statement is required for each service that you require. Multiple services can be added by separating them with commas.
@@ -112,7 +170,7 @@ export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis,p-mongodb:developme
 rspec
 ```
 
-### Cloud Foundry CLI
+### <a name="cli"></a>Cloud Foundry CLI
 The CF CLI is included via a plugin so that it is available to your Jenkins jobs.
 In a shell step you can now use the same `cf` commands that you would use directly from your machine.
 
@@ -141,12 +199,12 @@ These plugins **cannot** be removed.
 There are no restrictions on installing any other plugins, including CloudBees Enterprise plugins and open source.
 Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh.
 
-#### Gradle Wrapper
+#### <a name="gradle"></a>Gradle Wrapper
 We recommend that you use `Gradle Wrapper` in your application.
 
 When building your application, unless specified otherwise the generated file will be named after your **Jenkins job** and placed into **/build/libs/**
 
-### Environment Architecture
+### <a name="topology"></a>Environment Architecture
 
 #### Masters
 By default we configure one Jenkins Master. You can increase this value in the `Resources` tab in Ops Manager.
@@ -159,7 +217,7 @@ The more slaves you add, the more jobs you are able to run concurrently.
 
 You are also able to add in existing slaves from your infrastructure that are outside of PCF, which is recommended if you would like to add slaves with architecture different than Ubuntu Trusty.
 
-You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts. 
+You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts.
 
 ####Managing the Topology from GUI
 
