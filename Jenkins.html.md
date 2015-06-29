@@ -2,7 +2,7 @@
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ---
 
-CloudBees Jenkins Enterprise can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy, the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration and with common dependencies, languages and packages already installed. Upgrades to new versions, which include new versions of CloudBees, dependencies and new features are seamless and easy to install making the operators life easy.
+CloudBees Jenkins Enterprise can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy, the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration with common dependencies, languages and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies and new features are seamless and easy to install making the operators life easy.
 
 CloudBees Jenkins is tightly integrated into Pivotal Cloud Foundry to provide an enhanced application developer and workflow experience. Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests and easily create and bind to Pivotal Cloud Foundry service instances for integration testing.
 
@@ -12,13 +12,13 @@ CloudBees Jenkins is integrated with UAA to provide single sign-on functionality
 
 Key features of the product are:
 
-* Integration with Cloud Foundry UAA for Single Sign On (SSO) support
-* Isolation of builds by user and Cloud Foundry space
-* Use of the same buildpacks as runtime to ensure consistency for Ruby & NodeJS
-* Automatic provisioning of services instances for your tests
-* Seamless deployment to Cloud Foundry using the integrated CLI
-* Automatic master and slave configuration
-* Support for Gradle wrapper and Maven
+* [Integration with Cloud Foundry UAA for Single Sign On (SSO) support](http://docs.pivotal.io/cloudbees/security.html)
+* [Isolation of builds by user and Cloud Foundry space](http://docs.pivotal.io/cloudbees/security.html)
+* [Use of the same buildpacks as runtime to ensure consistency for Ruby & NodeJS](#buildpacks)
+* [Automatic provisioning of services instances for your tests](#services)
+* [Seamless deployment to Cloud Foundry using the integrated CLI](#cli)
+* [Automatic master and slave configuration](#topology)
+* [Support for Gradle wrapper and Maven](#gradle)
 
 ## Product snapshot
 
@@ -143,14 +143,14 @@ To manage plugins and to access `Manage Jenkins`, log in as the UAA Administrato
 
 To ensure consistency between your tests and the runtime environment, use the provided commands to execute your builds using the same buildpacks and services as your Cloud Foundry environment.
 
-#### Buildpacks
+#### <a name="buildpacks"></a>Buildpacks
 To use the correct buildpack, add the `. cf_buildpack` command into a shell step.
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
 Currently supported buildpacks are Ruby and NodeJS. However, even though the Java buildpack is not pre-installed, it is still possible to build and deliver java applications since all the necessary tools of the Java Buildpack are pre-installed and configured.
 
-#### Services
+#### <a name="services"></a>Services
 This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests.
 
 An export statement is required for each service that you require. Multiple services can be added by separating them with commas.
@@ -170,7 +170,7 @@ export REQUIRED_SERVICE_INSTANCES="p-redis:development:redis,p-mongodb:developme
 rspec
 ```
 
-### Cloud Foundry CLI
+### <a name="cli"></a>Cloud Foundry CLI
 The CF CLI is included via a plugin so that it is available to your Jenkins jobs.
 In a shell step you can now use the same `cf` commands that you would use directly from your machine.
 
@@ -199,12 +199,12 @@ These plugins **cannot** be removed.
 There are no restrictions on installing any other plugins, including CloudBees Enterprise plugins and open source.
 Any user installed plugins will be persisted after an upgrade or a restore of the VMs by Bosh.
 
-#### Gradle Wrapper
+#### <a name="gradle"></a>Gradle Wrapper
 We recommend that you use `Gradle Wrapper` in your application.
 
 When building your application, unless specified otherwise the generated file will be named after your **Jenkins job** and placed into **/build/libs/**
 
-### Environment Architecture
+### <a name="topology"></a>Environment Architecture
 
 #### Masters
 By default we configure one Jenkins Master. You can increase this value in the `Resources` tab in Ops Manager.
