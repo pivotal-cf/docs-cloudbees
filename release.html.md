@@ -13,6 +13,10 @@ Note that the specific version of the stemcell has to be uploaded and installed 
 
 In addition, the new product version bundles the latest version of CloudBees Jenkins Enterprise [15.05 / 1.609.1.1](http://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.609.1.1).
 
+Summary of features included in this release:
+
+* Upgrade of CloudBees Jenkins Enterprise to v15.05
+* Upgrade of Bosh Stemcell from 1989 to 3012
 
 ### 14.11.01.03
 
