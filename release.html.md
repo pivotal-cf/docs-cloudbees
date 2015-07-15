@@ -4,6 +4,16 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.00
+
+**Release Date: 22nd July 2015**
+
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry 15.05.01.00 fixes a flaw found in the way OpenSSL verified alternative certificate chains (CVE-2015-1793) and allows the use of all AWS regions supported by Ops Manager thanks to the use of the latest Bosh stemcell (3012).
+Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry 15.05.01.00.
+
+In addition, the new product version bundles the latest version of CloudBees Jenkins Enterprise [15.05 / 1.609.1.1](http://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.609.1.1).
+
+
 ### 14.11.01.03
 
 **Release Date: 19th June 2015**
