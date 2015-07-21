@@ -16,7 +16,7 @@ In addition, the new product version bundles the latest version of CloudBees Jen
 Summary of features included in this release:
 
 * Upgrade of CloudBees Jenkins Enterprise to v15.05
-* Upgrade of Bosh Stemcell from 1989 to 3012
+* Upgrade of Bosh Stemcell from 2989 to 3012
 
 ### 14.11.01.03
 
