@@ -74,7 +74,13 @@ For more information, refer to the full Product Version Matrix.
 <tr>
   <th>1.5.x</th>
   <td><ul>
-      <li>From 14.11.01.03 to 15.05.01.00</li>
+      <li>From 1.3.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.3 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.4 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.5 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.6 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.7.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.8.3 to 14.11.01.03, 15.05.01.00</li>
     </ul>
   </td>
 </tr>
