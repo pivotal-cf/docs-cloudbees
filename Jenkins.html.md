@@ -27,8 +27,8 @@ Key features of the product are:
 <dd><strong>Version</strong>: 15.05.01.00 </dd>
 <dd><strong>Release Date</strong>: 22nd July 2015</dd>
 <dd><strong>Software component version</strong>: CloudBees Jenkins 1.609.1.1</dd>
-<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x</dd>
-<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x</dd>
+<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x, 1.5.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x, 1.5.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
 <dd><strong>AWS support?</strong> Yes</dd>
 </dl>
@@ -61,13 +61,13 @@ For more information, refer to the full Product Version Matrix.
 <tr>
   <th>1.4.x</th>
   <td><ul>
-      <li>From 1.3.2 to 15.05.01.00</li>
-      <li>From 1.3.3 to 15.05.01.00</li>
-      <li>From 1.3.4 to 15.05.01.00</li>
-      <li>From 1.3.5 to 15.05.01.00</li>
-      <li>From 1.3.6 to 15.05.01.00</li>
-      <li>From 1.3.7.2 to 15.05.01.00</li>
-      <li>From 1.3.8.3 to 15.05.01.00</li>
+      <li>From 1.3.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.3 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.4 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.5 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.6 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.7.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.8.3 to 14.11.01.03, 15.05.01.00</li>
       <li>From 14.11.01.03 to 15.05.01.00</li>
     </ul>
   </td>
