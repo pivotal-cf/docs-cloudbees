@@ -2,6 +2,11 @@
 title: Continuous Delivery for Ruby with CloudBees Jenkins Enterprise
 ---
 
+### Known limitation
+
+The `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled (14.11.x and 15.05.x versions). We are working on reintroducing it.
+
+
 ### Introduction
 This is a guide on how to use CloudBees Jenkins Enterprise for Pivotal Cloud Foundry and integrate with your Cloud Foundry installation.
 
@@ -14,7 +19,7 @@ This guide will cover:
 5. Pushing your application
 
 ### Getting setup
-1. Log in to Jenkins at `http://pivotal-cloudbees.your-cf-installation.com`.
+1. Log in to Jenkins at `http://jenkins-0.your-cf-installation.com` (or `http://pivotal-cloudbees.your-cf-installation.com` if you are using a backward compatible hostname).
 2. Click `New item` on the left hand navigation menu.
 3. Choose `Build a free-style software project`, give it a name, such as `redis-test-build`, and click `ok`.
 
@@ -48,6 +53,9 @@ Note:
 <%= image_tag("../images/step4.jpeg") %>
 
 #### Test Services
+
+**Known limitation:** The `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled (14.11.x and 15.05.x versions). We are working on reintroducing it.
+
 You can create instances of the same services that you use in your development, staging, and production environments to use for your tests.
 
 Our test app uses Redis, so we'll create a test instance of this for use only in our tests.
@@ -62,8 +70,8 @@ Our test app uses Redis, so we'll create a test instance of this for use only in
 The CLI is provided for use in shell steps exactly the same as using it from your local machine.
 Under `Build Environment` check `Set up Cloud Foundry CLI`
 
-* **API EndPoint**: `api.your-cf-installation.com/`
-* **Skip ssl Validation**: checked
+* **API EndPoint**: `https://api.your-cf-installation.com/`
+* **Skip ssl Validation**: checked if you use a self-signed/untrusted certificate 
 * **API Credentials**: select your PCF/UAA Credentials (CloudFoundry CLI credentials may only be configured at the folder-level, see 'credentials' section for more details )
 * **Organization**: the organization you belong to on PCF
 * **Space**: the space of your organization in which you would like to deploy the application
@@ -97,6 +105,7 @@ cf restart redis-example-app<br>
 </p>
 
 ### Save & Build
+
 1. Click `save` at the bottom of the page.
 2. On the left hand menu, click `Build Now`. Your new build job will then appear below.
 

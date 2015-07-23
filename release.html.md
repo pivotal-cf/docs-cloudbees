@@ -20,6 +20,9 @@ Summary of features included in this release:
 * Upgrade of CloudBees Jenkins Enterprise to v15.05
 * Upgrade of Bosh Stemcell from 2989 to 3012
 
+**Known limitation:** the `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled. We are working on reintroducing it.
+
+
 ### 14.11.01.03
 
 **Release Date: 19th June 2015**
@@ -44,6 +47,8 @@ Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal C
 * Configuration
    * Refactor Jenkins auto-configuration procedure to rely on Groovy init scripts
    * Better ability during platform upgrades to merge user defined configuration with configuration provided by the deployments on Pivotal Cloud Foundry (JVM, slaves, tool installations...)
+
+**Known limitation:** the `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled. We are working on reintroducing it.
 
 ### 1.3.8
 **Release Date: 1st April 2015**
