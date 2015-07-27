@@ -24,11 +24,11 @@ Key features of the product are:
 
 <dl>
 <dt>CloudBees Jenkins Enterprise for Pivotal Cloud Foundry Details</dt>
-<dd><strong>Version</strong>: 14.11.01.03 </dd>
-<dd><strong>Release Date</strong>: 19th June 2015</dd>
-<dd><strong>Software component version</strong>: CloudBees Jenkins 1.554.10.1</dd>
-<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x</dd>
-<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x</dd>
+<dd><strong>Version</strong>: 15.05.01.00 </dd>
+<dd><strong>Release Date</strong>: 22nd July 2015</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins 1.609.1.1</dd>
+<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x, 1.5.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x, 1.5.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
 <dd><strong>AWS support?</strong> Yes</dd>
 </dl>
@@ -37,7 +37,7 @@ Key features of the product are:
 
 Consider the following compatibility information before upgrading CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
 
-<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x, you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
+<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
 
 For more information, refer to the full Product Version Matrix.
 
@@ -59,15 +59,15 @@ For more information, refer to the full Product Version Matrix.
   </td>
 </tr>
 <tr>
-  <th>1.4.x</th>
+  <th>1.4.x and 1.5.x</th>
   <td><ul>
-      <li>From 1.3.2 to 14.11.01.03</li>
-      <li>From 1.3.3 to 14.11.01.03</li>
-      <li>From 1.3.4 to 14.11.01.03</li>
-      <li>From 1.3.5 to 14.11.01.03</li>
-      <li>From 1.3.6 to 14.11.01.03</li>
-      <li>From 1.3.7.2 to 14.11.01.03</li>
-      <li>From 1.3.8.3 to 14.11.01.03</li>
+      <li>From 1.3.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.3 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.4 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.5 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.6 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.7.2 to 14.11.01.03, 15.05.01.00</li>
+      <li>From 1.3.8.3 to 14.11.01.03, 15.05.01.00</li>
     </ul>
   </td>
 </tr>
@@ -110,7 +110,7 @@ This can be incremented in the `Resources` tab within the tile on Ops Manager.
 
 Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com` if you upgraded the Jenkins Product on Pivotal Cloud Foundry from an older version (13.8).
 
-If you directly install version 14.11, Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
+If you directly install version 14.11 or higher (15.05), Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
 
 If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequentials values as the number of instances generated.
 
