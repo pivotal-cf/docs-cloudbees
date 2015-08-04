@@ -39,7 +39,7 @@ Consider the following compatibility information before upgrading CloudBees Jenk
 
 <p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
 
-For more information, refer to the full Product Version Matrix.
+For more information, refer to the full [Product Version Matrix](../compatibility-matrix.pdf).
 
 <table border="1" class="nice">
 <tr>
