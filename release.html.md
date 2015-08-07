@@ -4,6 +4,11 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.03: 08th August 2015**
+
+* Fix Docker container setup on Jenkins slaves: use the ephemeral disk instead of the VM root file system.
+
+
 ### 15.05.01.02: 08th August 2015**
 
 * Add support for docker containers on build slaves (integrated with the [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin) and the [Jenkins Docker Workflow](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Workflow+Plugin).
