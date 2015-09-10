@@ -4,6 +4,10 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.05: 10th September 2015
+
+* Fix bug in definition of Docker insecure registries and registry mirrors.
+
 ### 15.05.01.04: 1st September 2015
 
 * Upgrade Docker to version 1.8.1.
