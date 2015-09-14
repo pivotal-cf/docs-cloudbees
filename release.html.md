@@ -7,6 +7,12 @@ Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 ### 15.05.01.05: 10th September 2015
 
 * Fix bug in definition of Docker insecure registries and registry mirrors.
+* Resolve security vulnerabilities upgrading the stemcell to version 3062
+   * [USN-2694-1](http://www.ubuntu.com/usn/usn-2694-1/) PCRE vulnerabilities
+   * [USN-2698-1](http://www.ubuntu.com/usn/usn-2698-1/) SQLite vulnerabilities
+   * [USN-2710-1](http://www.ubuntu.com/usn/USN-2710-1) OpenSSH vulnerabilities
+   * [USN-2710-2](http://www.ubuntu.com/usn/USN-2710-2) OpenSSH regression
+   * [USN-2718-1](http://www.ubuntu.com/usn/USN-2718-1) Linux kernel (Vivid HWE) vulnerability
 
 ### 15.05.01.04: 1st September 2015
 
@@ -15,12 +21,7 @@ Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 * Freeze random Jenkins listen ports to ease security hardening and firewalling:
    * SSH Daemon: 2222
    * JNLP port: 10000
-* Resolve security vulnerabilities upgrading the stemcell to version 3062
-   * [USN-2694-1](http://www.ubuntu.com/usn/usn-2694-1/) PCRE vulnerabilities
-   * [USN-2698-1](http://www.ubuntu.com/usn/usn-2698-1/) SQLite vulnerabilities
-   * [USN-2710-1](http://www.ubuntu.com/usn/USN-2710-1) OpenSSH vulnerabilities
-   * [USN-2710-2](http://www.ubuntu.com/usn/USN-2710-2) OpenSSH regression
-   * [USN-2718-1](http://www.ubuntu.com/usn/USN-2718-1) Linux kernel (Vivid HWE) vulnerability
+* Resolve security vulnerabilities upgrading the stemcell to version 3058
 
 ### 15.05.01.03: 08th August 2015
 
