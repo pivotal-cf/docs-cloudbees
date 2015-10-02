@@ -4,6 +4,13 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.07: 2nd October 2015
+
+* Upgrade CloudBees Jenkins Enterprise to version 1.609.3.1.
+* Minor enhancements of the setup of slaves for Docker plugins.
+* Resolve minor security vulnerabilities upgrading the stemcell to version 3074.
+* Upgrade Docker to version 1.8.2.
+
 ### 15.05.01.05: 10th September 2015
 
 * Fix bug in definition of Docker insecure registries and registry mirrors.
