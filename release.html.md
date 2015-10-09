@@ -4,6 +4,17 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.08: 9th October 2015
+Note one important known issue with the 1.5.6 patch for Openstack deployments. BOSH stemcell v3094, which this version of Elastic Runtime references, has a limiation affecting Openstack users only:
+
+Elastic Runtime 1.5.6 on Openstack does not work with S3/Swift blobstores.
+Elastic Runtime 1.5.6 on Openstack users must configure their object storage to use the internal blobstore option.
+vSphere, AWS and vCloud users are not affected.
+This will be fixed in the next release.
+
+* Update stemcell to version 3094
+* Fix an issue related to jnlp agent listener.
+
 ### 15.05.01.07: 2nd October 2015
 
 * Upgrade CloudBees Jenkins Enterprise to version 1.609.3.1.
