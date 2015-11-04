@@ -1,25 +1,25 @@
 ---
-title: Security-CloudBees Jenkins Enterprise integration with Pivotal Cloud Foundry
+title: Security-CloudBees Jenkins Enterprise integration with Pivotal Cloud Foundry&reg;
 ---
 
 ## Introduction
-This is a guide on how to use CloudBees Jenkins Enterprise security model integrates with Pivotal Cloud Foundry on your Cloud Foundry installation.
+This is a guide on how to use CloudBees Jenkins Enterprise security model integrates with Pivotal Cloud Foundry&reg; on your Cloud Foundry installation.
 
 This guide will cover:
 
-1. Authentication: Pivotal Cloud Foundry / UAA as the Identity Provider (IDP) f the SSO Authentication for Jenkins
+1. Authentication: Pivotal Cloud Foundry&reg; / UAA as the Identity Provider (IDP) of the SSO Authentication for Jenkins
 2. Authorization: Cloud Foundry Authorization model based on organizations and spaces in Jenkins
 3. Administrator permissions on Jenkins
 4. Resetting the permissions
 
-### Authentication: Pivotal Cloud Foundry / UAA as the Identity Provider (IDP) of the SSO Authentication for Jenkins
+### Authentication: Pivotal Cloud Foundry&reg; / UAA as the Identity Provider (IDP) of the SSO Authentication for Jenkins
 
 The UAA is the identity management service for Cloud Foundry and acts a SSO service for Jenkins. This means that all the users can authenticate to Jenkins using the same credentials used to access the CF platform.
 
 ### Authorization: Cloud Foundry Authorization model based on organizations and spaces in Jenkins
 
 The Jenkins instance will come pre-configured with some Authorization settings that limit the read-write permission of the user to the CF organizations he belongs to.
-For each logged-in user a folder will be automatically created (if does not exist yet) for each organization the user belongs to and an additional folder specific to the user: the latter will be only visible by the specific user, wherease the organization-folders will be shared across all the members of the same organizations.
+For each logged-in user a folder will be automatically created (if does not exist yet) for each organization the user belongs to and an additional folder specific to the user: the latter will be only visible by the specific user, whereas the organization-folders will be shared across all the members of the same organizations.
 
 For example, an user belonging to the CF organization "cloudbees"
 
@@ -62,7 +62,7 @@ Differently, a CF administrator (whoever is member of the UAA group `cloud_contr
   ![Authorization]
   <%= image_tag("../images/authorisation-3.2.png") %>
 
-As conseguence, the admin user in Jenkins will be member of all the external groups matching these organizations
+As a consequence, the admin user in Jenkins will be member of all the external groups matching these organizations
 
   ![Authorization]
   <%= image_tag("../images/authorisation-3.1.png") %>
@@ -81,7 +81,7 @@ Disable security as recommended in https://wiki.jenkins-ci.org/display/JENKINS/D
 
 For this, you need to access to the jenkins master file system `/var/vcap/store/jenkins_master`.
 
-On restart, CloudBees Jenkins Enterprise for Pivotal Cloud Foundry, it automatically configures Pivotal Cloud Foundry Single Sign On.
+On restart, CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;, it automatically configures Pivotal Cloud Foundry&reg; Single Sign On.
 To disable this automatic configuration, create the following empty files:
 
 * `/var/vcap/store/jenkins_master/.disable-authentication-script`
