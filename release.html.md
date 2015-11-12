@@ -4,6 +4,13 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 Release notes for CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
+### 15.05.01.11: November 12th 2015
+* Update stemcell to 3130.
+* Update CloudBees Jenkins Enterprise to 1.609.14.1.
+* Update HAProxy to 1.5.15.
+* Disable SSLv3 support by default.
+* CloudFoundry UAA plugin now supports CLI.
+
 ### 15.05.01.09: 20th October 2015
 
 * Update stemcell to 3100. 
