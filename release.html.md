@@ -4,6 +4,14 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
 
 Release notes for CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
 
+### 15.11.01.01: November 27th 2015
+* Update stemcell to 3140
+* Update Cloudbees Jenkins Enterprise to 15.11 (Jenkins 1.625.2.2). See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
+* Update CloudFoundry CLI to 6.14.0
+* Update versions of bundled plugins
+* Bundle Gitlab plugin
+* Fixed warning about jnlp port already in use.
+
 ### 15.05.01.11: November 12th 2015
 * Update stemcell to 3130 which fixes the following vulnerabilities
    * [USN-2806-1](http://www.ubuntu.com/usn/usn-2806-1/)
