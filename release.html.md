@@ -4,6 +4,11 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
 
 Release notes for CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
 
+### 15.11.01.02: December 14th 2015
+* Update stemcell to 3146
+   * [USN-2821-1](http://www.ubuntu.com/usn/usn-2821-1/)
+* Update CloudBees Jenkins Enterprise to 1.625.3.1. This security release fixes [several vulnerabilities](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-12-09).
+
 ### 15.11.01.01: November 27th 2015
 * Update stemcell to 3140
 * Update Cloudbees Jenkins Enterprise to 15.11 (Jenkins 1.625.2.2). See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
