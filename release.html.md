@@ -1,8 +1,14 @@
 ---
-title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
+title: CloudBees Jenkins Platform for Pivotal Cloud Foundry&reg;
 ---
 
-Release notes for CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
+Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
+
+### 15.11.02.01: January 13th 2016
+* Update stemcell to 3146.2
+   * [USN-2857-1](http://www.ubuntu.com/usn/usn-2857-1/)
+* The tile has been renamed to CloudBees Jenkins Platform. It now includes both CloudBees Jenkins Enterprise and CloudBees Jenkins Operations Center in a single deployment.
+* Update CloudFoundry CLI to 6.14.1
 
 ### 15.11.01.02: December 14th 2015
 * Update stemcell to 3146
