@@ -179,7 +179,7 @@ The credentials for Cloud Foundry will be set up in the plugin configuration sec
   ![CF CLI Configuration Section]
   (/images/cd-cf-cli.png)
 
-For more details on the CF CLI, please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/installcf/whats-new-v6.html).
+For more details on the CF CLI, please see the [documentation](http://docs.pivotal.io/pivotalcf/devguide/cf-cli/getting-started.html).
 
 ### Jenkins Plugins
 As part of the installation, we automatically install the following additional plugins:
