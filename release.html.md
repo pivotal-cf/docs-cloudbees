@@ -4,6 +4,21 @@ title: CloudBees Jenkins Platform for Pivotal Cloud Foundry&reg;
 
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
 
+### 15.11.02.02: March 4th 2016
+* Update stemcell to 3146.9
+  * [USN-2861-1](http://www.ubuntu.com/usn/usn-2861-1/)
+  * [USN-2865-1](http://www.ubuntu.com/usn/usn-2865-1/)
+  * [USN-2868-1](http://www.ubuntu.com/usn/usn-2868-1/)
+  * [USN-2869-1](http://www.ubuntu.com/usn/usn-2869-1/)
+  * [USN-2871-1](http://www.ubuntu.com/usn/usn-2871-1/)
+  * [USN-2896-1](http://www.ubuntu.com/usn/usn-2896-1/)
+  * [USN-2897-1](http://www.ubuntu.com/usn/usn-2897-1/)
+  * [USN-2900-1](http://www.ubuntu.com/usn/usn-2900-1/)
+  * [USN-2910-1](http://www.ubuntu.com/usn/usn-2910-1/)
+* Update CloudBees Jenkins Operations Center to 1.625.16.1. See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Operations+Center)
+* Update CloudBees Jenkins Enterprise to 1.642.2.1. See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise)
+* Hardened https frontend settings by disabling weak ciphers.
+
 ### 15.11.02.01: January 13th 2016
 * Update stemcell to 3146.2
    * [USN-2857-1](http://www.ubuntu.com/usn/usn-2857-1/)
