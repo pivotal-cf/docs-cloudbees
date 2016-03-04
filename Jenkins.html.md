@@ -1,5 +1,6 @@
 ---
 title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
+owner: London Services
 ---
 
 CloudBees Jenkins Enterprise can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy: the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration, with common dependencies, languages, and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies, and new features are seamless and easy to install, making the operator's life easy.

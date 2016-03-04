@@ -1,5 +1,6 @@
 ---
 title: CloudBees Jenkins Platform for Pivotal Cloud Foundry&reg;
+owner: London Services
 ---
 
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
@@ -51,8 +52,8 @@ Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](ht
 
 ### 15.05.01.09: 20th October 2015
 
-* Update stemcell to 3100. 
-* Fixed edge case upgrade scenarios. 
+* Update stemcell to 3100.
+* Fixed edge case upgrade scenarios.
 * Improve supportability of the Pivotal package.
 
 ### 15.05.01.08: 9th October 2015
@@ -107,7 +108,7 @@ Note that the specific version of the stemcell has to be uploaded and installed 
 
 ### 15.05.01.00: 22nd July 2015
 
-CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00 fixes the security issues 
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00 fixes the security issues
 [CVE-2015-1420](http://pivotal.io/security/cve-2015-1420), [CVE-2015-1330](https://pivotal.io/security/cve-2015-1330) and [USN-2639-1](https://pivotal.io/security/usn-2639-1) thanks to the upgrade to the Bosh Stemcell 3012.
 
 Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00.
@@ -125,9 +126,9 @@ Summary of features included in this release:
 ### 14.11.01.03: 19th June 2015
 
 CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 14.11.01.03 includes a patch for
-the Cannonical Ubuntu CVE-2015-1328 security fix. This patch resolves an overlayfs privilege 
-escalation, which a local user could exploit to gain administrative privileges on the system. 
-Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry&reg; is running on 
+the Cannonical Ubuntu CVE-2015-1328 security fix. This patch resolves an overlayfs privilege
+escalation, which a local user could exploit to gain administrative privileges on the system.
+Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry&reg; is running on
 (2989) must be uploaded and installed along with this CloudBees Jenkins Enterprise release in Ops Manager.
 
 Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
@@ -135,7 +136,7 @@ Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal C
 * Security
    * Authentication: load CF Organizations as Jenkins groups in the Cloud Foundry UAA Authentication plugin
    * Change the default authorization model to use [CloudBees RBAC](https://www.cloudbees.com/products/jenkins-enterprise/plugins/role-based-access-control-plugin). By default, the created jobs are isolated by Cloud Foundry Organizations or by user.
-* Tools 
+* Tools
    * Upgrade the bundled JDK to OpenJDK 8 to match Pivotal Elastic Runtime 1.4 environment
    * Bump Cloud Foundry CLI version to 6.11
 * Plugins

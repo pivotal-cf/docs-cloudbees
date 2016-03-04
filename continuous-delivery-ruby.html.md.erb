@@ -1,5 +1,6 @@
 ---
 title: Continuous Delivery for Ruby with CloudBees Jenkins Enterprise
+owner: London Services
 ---
 
 ### Known limitation
@@ -71,7 +72,7 @@ The CLI is provided for use in shell steps exactly the same as using it from you
 Under `Build Environment` check `Set up Cloud Foundry CLI`
 
 * **API EndPoint**: `https://api.your-cf-installation.com/`
-* **Skip ssl Validation**: checked if you use a self-signed/untrusted certificate 
+* **Skip ssl Validation**: checked if you use a self-signed/untrusted certificate
 * **API Credentials**: select your PCF/UAA Credentials (CloudFoundry CLI credentials may only be configured at the folder-level, see 'credentials' section for more details )
 * **Organization**: the organization you belong to on PCF
 * **Space**: the space of your organization in which you would like to deploy the application
