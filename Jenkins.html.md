@@ -1,13 +1,13 @@
 ---
-title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
+title: CloudBees Jenkins Platform for Pivotal Cloud Foundry
 owner: London Services
 ---
 
-CloudBees Jenkins Enterprise can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy: the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration, with common dependencies, languages, and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies, and new features are seamless and easy to install, making the operator's life easy.
+CloudBees Jenkins Platform can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated and easy: the topology and resourcing requirements of your setup can be easily changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration, with common dependencies, languages, and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies, and new features are seamless and easy to install, making the operator's life easy.
 
-CloudBees Jenkins is tightly integrated into Pivotal Cloud Foundry to provide an enhanced application developer and workflow experience. Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests and easily create and bind to Pivotal Cloud Foundry service instances for integration testing.
+CloudBees Jenkins Platform is tightly integrated into Pivotal Cloud Foundry to provide an enhanced application developer and workflow experience. Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests and easily create and bind to Pivotal Cloud Foundry service instances for integration testing.
 
-CloudBees Jenkins is integrated with UAA to provide single sign-on functionality for users, providing a seamless platform experience as well segregating builds by user and space for isolation and security. Applications can be easily deployed to Cloud Foundry, using a blue-green deployment strategy, upon a successful build using the integrated CLI plugin and credentials store.
+CloudBees Jenkins Platform is integrated with UAA to provide single sign-on functionality for users, providing a seamless platform experience as well segregating builds by user and space for isolation and security. Applications can be easily deployed to Cloud Foundry, using a blue-green deployment strategy, upon a successful build using the integrated CLI plugin and credentials store.
 
 ### Features
 
@@ -24,10 +24,10 @@ Key features of the product are:
 ## Product snapshot
 
 <dl>
-<dt>CloudBees Jenkins Enterprise for Pivotal Cloud Foundry Details</dt>
-<dd><strong>Version</strong>: 15.05.01.00 </dd>
-<dd><strong>Release Date</strong>: 22nd July 2015</dd>
-<dd><strong>Software component version</strong>: CloudBees Jenkins 1.609.1.1</dd>
+<dt>CloudBees Jenkins Platform for Pivotal Cloud Foundry Details</dt>
+<dd><strong>Version</strong>: 15.11.02.02 </dd>
+<dd><strong>Release Date</strong>: 8th March 2016</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins Platform 1.642.2.1</dd>
 <dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x, 1.5.x</dd>
 <dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x, 1.5.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
@@ -36,47 +36,15 @@ Key features of the product are:
 
 ### Upgrading to the Latest Version
 
-Consider the following compatibility information before upgrading CloudBees Jenkins Enterprise for Pivotal Cloud Foundry.
+Consider the following compatibility information before upgrading CloudBees Jenkins Platform for Pivotal Cloud Foundry.
 
-<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Enterprise for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Enterprise for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
+<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Platform for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Platform for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
 
 For more information, refer to the full [Product Version Matrix](../compatibility-matrix.pdf).
 
-<table border="1" class="nice">
-<tr>
-  <th>Ops Manager Version</th>
-  <th>Supported Upgrades from Imported CloudBees Jenkins Enterprise Installation</th>
-</tr>
-<tr>
-  <th>1.3.x</th>
-  <td><ul>
-      <li>From 1.3.2 to 1.3.3, 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
-      <li>From 1.3.3 to 1.3.4, 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
-      <li>From 1.3.4 to 1.3.5, 1.3.6, 1.3.7.2, 1.3.8.3</li>
-      <li>From 1.3.5 to 1.3.6, 1.3.7.2, 1.3.8.3</li>
-      <li>From 1.3.6 to 1.3.7.2, 1.3.8.3</li>
-      <li>From 1.3.7.2 to 1.3.8.3</li>
-    </ul>
-  </td>
-</tr>
-<tr>
-  <th>1.4.x and 1.5.x</th>
-  <td><ul>
-      <li>From 1.3.2 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.3 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.4 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.5 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.6 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.7.2 to 14.11.01.03, 15.05.01.00</li>
-      <li>From 1.3.8.3 to 14.11.01.03, 15.05.01.00</li>
-    </ul>
-  </td>
-</tr>
-</table>
-
 ### Install via Pivotal Ops Manager
 
-To install CloudBees Jenkins Enterprise for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
+To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -111,7 +79,7 @@ This can be incremented in the `Resources` tab within the tile on Ops Manager.
 
 Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com` if you upgraded the Jenkins Product on Pivotal Cloud Foundry from an older version (13.8).
 
-If you directly install version 14.11 or higher (15.05), Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
+If you directly install version 14.11 or higher, Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
 
 If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequentials values as the number of instances generated.
 
@@ -182,7 +150,7 @@ The credentials for Cloud Foundry will be set up in the plugin configuration sec
 
 For more details on the CF CLI, please see the [documentation](http://docs.pivotal.io/pivotalcf/cf-cli/getting-started.html).
 
-### Jenkins Plugins
+### Jenkins Plugins
 As part of the installation, we automatically install the following additional plugins:
 
 1. Cloud Foundry UAA
@@ -237,7 +205,7 @@ Each of them, will have 1 online and pre-configured slave attached.
 
 ### Known Limitations
 
-Limitations with the current CloudBees Jenkins Enterprise for Pivotal Cloud Foundry product include:
+Limitations with the current CloudBees Jenkins Platform for Pivotal Cloud Foundry product include:
 
 * Currently supported buildpacks are Ruby and NodeJS (this DOES NOT mean that you can't build java application though, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
@@ -250,9 +218,9 @@ Please provide any bugs, feature requests, or questions to [the Pivotal Cloud Fo
 
 ### Version
 
-This product is based on CloudBees Jenkins Enterprise version 1.554.10.1.
+See [Release Notes](release.html)
 
 ### Further Reading
 
-* [Official CloudBees Jenkins Enterprise Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
+* [Official CloudBees Jenkins Platform Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
 * [Jenkins Open Source](http://jenkins-ci.org/)
