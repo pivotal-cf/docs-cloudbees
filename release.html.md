@@ -3,7 +3,7 @@ title: CloudBees Jenkins Platform for Pivotal Cloud Foundry&reg;
 owner: London Services
 ---
 
-Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF)
+Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ### 15.11.02.02: March 4th 2016
 * Update stemcell to 3146.9
