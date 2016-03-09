@@ -81,6 +81,8 @@ Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-inst
 
 If you directly install version 14.11 or higher, Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
 
+**For technical reasons, the tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, please make sure only one is selected.**
+
 If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequentials values as the number of instances generated.
 
 i.e. if you install 3 masters, then the 3 instances can be accessed via:
