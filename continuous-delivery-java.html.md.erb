@@ -2,6 +2,7 @@
 title: Continuous Delivery for Java with CloudBees Jenkins Enterprise
 owner: London Services
 ---
+
 ## Introduction
 This is a guide on how to use CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF) and integrate with your Cloud Foundry installation.
 
@@ -21,8 +22,6 @@ This guide covers the following topics:
 This guide uses the Spring PetClinic Application as an example. 
 You can find the Spring PetClinic Application at `https://github.com/CloudBees-community/spring-petclinic.git`
 
-### CF CLI Configuration Section
-
 <%= image_tag("../images/cd-cf-github.png") %>
 
 * Under `Build Triggers`, select `Build when a change is pushed to GitHub`.
@@ -35,7 +34,7 @@ You can find the Spring PetClinic Application at `https://github.com/CloudBees-c
   * **Organization**: Use the organization that you belong to on PCF.
   * **Space**: Use the space in your organization where you want to deploy the application.
 
-### <a href="cf-cli"></a>cf CLI Configuration Section
+## <a id="cf-cli"></a>cf CLI Configuration Section
 
 <%= image_tag("../images/cd-cf-cli.png") %>
 
@@ -46,18 +45,16 @@ Replace `APP-NAME` with the name of your application.
 Replace `PATH-TO-APP` with the local path to your application, including the application itself.
 In our example, we use insert the following: `cf push petclinic -p target/petclinic.war`
 
-### CF CLI Configuration Section 
-
 <%= image_tag("../images/cd-cf-build.png") %>
 
 * Save the configuration. Click ``Build Now'' to run the build.
 
-###  Managing the Deployed Application
+### Managing the Deployed Application
 
 After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.com/`), 
 in the organization and space that you defined in the [cf CLI](#cf-cli) configuration section.
 
-###Elastic Runtime Console
+### Elastic Runtime Console
 
 <%= image_tag("../images/cd-cf-elastic-1.png") %>
 
@@ -73,7 +70,7 @@ For our example, no GitHub credentials are needed.
 
 Note: You can only specify credentials at the folder level.
 
-###<a href="credentials"></a> Credentials Set Up
+###<a id="credentials"></a> Credentials Set Up
 
 Only Administrators can create global credentials.
 For this reason, the `Add` Credentials Button in the job configuration page is disabled to users.
