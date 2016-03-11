@@ -77,7 +77,12 @@ For this reason, the `Add` Credentials Button in the job configuration page is d
 A user can still create credentials at the folder level, for example, in any of the job parent folders.
 Follow the step below to create credentials at the folder level:
 
-* Access the folder where you want to configure the credentials, for example, the CloudBees folder. Click `Configure`.
+Only Administrators have the permission to create global credentials. 
+For this reason, in the job configuration page (when setting up the i.e. git project, CF CLI, ...) the `Add` Credentials Button is disabled to the user. 
+However, a non-administration user can still create credentials at folder level i.e. in any of the job parent folder. 
+The procedure is quite straightforward:
+ 
+* Access the folder where you want to configure the credentials (i.e. CloudBees folder) and click on `Configure`
 
 <%= image_tag("../images/folder-configuration.png") %>
 
