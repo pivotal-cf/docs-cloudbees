@@ -3,8 +3,8 @@ title: Continuous Delivery for Java with CloudBees Jenkins Enterprise
 owner: London Services
 ---
 
-## Introduction
-This is a guide on how to use CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF) and integrate with your Cloud Foundry installation.
+# Introduction
+This is a guide using CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF) and integrate with your Cloud Foundry installation.
 
 This guide covers the following topics:
 
@@ -30,11 +30,11 @@ You can find the Spring PetClinic Application at `https://github.com/CloudBees-c
   * **API EndPoint**: Use `api.your-cf-installation.com/`
   * **Skip SSL Validation**: Check this.
   * **API Credentials**: Select your PCF/UAA Credentials. Note that Cloud Foundry CLI credentials can only be configured at 
-  the folder-level. See the [credentials](#credentials] section of this topic for more details.
+  the folder-level. See the credentials section of this topic for more details.
   * **Organization**: Use the organization that you belong to on PCF.
   * **Space**: Use the space in your organization where you want to deploy the application.
 
-## <a id="cf-cli"></a>cf CLI Configuration Section
+## cf CLI Configuration Section
 
 <%= image_tag("../images/cd-cf-cli.png") %>
 
@@ -49,12 +49,12 @@ In our example, we use insert the following: `cf push petclinic -p target/petcli
 
 * Save the configuration. Click ``Build Now'' to run the build.
 
-### Managing the Deployed Application
+## Managing the Deployed Application
 
 After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.com/`), 
-in the organization and space that you defined in the [cf CLI](#cf-cli) configuration section.
+in the organization and space that you defined in the cf CLI configuration section of this topic.
 
-### Elastic Runtime Console
+## Elastic Runtime Console
 
 <%= image_tag("../images/cd-cf-elastic-1.png") %>
 
@@ -62,7 +62,7 @@ From the Pivotal Cloud Foundry&reg; Elastic Runtime Console Page, you can scale,
 
 <%= image_tag("../images/cd-cf-elastic.png") %>
 
-### Github Set Up
+## Github Set Up
 
 Both the Github plugin and git are already installed in your Jenkins instance. 
 You must only specify the URL of the project that you want to build and deploy, and the GitHub credentials to use, if any.
@@ -70,7 +70,7 @@ For our example, no GitHub credentials are needed.
 
 Note: You can only specify credentials at the folder level.
 
-###<a id="credentials"></a> Credentials Set Up
+## Credentials Set Up
 
 Only Administrators can create global credentials.
 For this reason, the `Add` Credentials Button in the job configuration page is disabled to users.
