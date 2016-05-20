@@ -40,7 +40,7 @@ Consider the following compatibility information before upgrading CloudBees Jenk
 
 <p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Platform for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Platform for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
 
-For more information, refer to the full [Product Version Matrix](../compatibility-matrix.pdf).
+For more information, refer to the full [Product Version Matrix](http://docs.pivotal.io/compatibility-matrix.pdf).
 
 ### Install via Pivotal Ops Manager
 
@@ -83,7 +83,7 @@ If you directly install version 14.11 or higher, Jenkins will be accessible via 
 
 **For technical reasons, the tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, please make sure only one is selected.**
 
-If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequentials values as the number of instances generated.
+If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequential values as the number of instances generated.
 
 i.e. if you install 3 masters, then the 3 instances can be accessed via:
 
@@ -119,7 +119,7 @@ To use the correct buildpack, add the `. cf_buildpack` command into a shell step
 
 <p class="note"><strong>Note</strong>: The full stop is required, as builds execute within the `sh` shell.</p>
 
-Currently supported buildpacks are Ruby and NodeJS. However, even though the Java buildpack is not pre-installed, it is still possible to build and deliver java applications since all the necessary tools of the Java Buildpack are pre-installed and configured.
+Currently supported buildpacks are Ruby and NodeJS. However, even though the Java buildpack is not pre-installed, it is still possible to build and deliver java applications since all the necessary tools of the Java buildpack are pre-installed and configured.
 
 #### <a name="services"></a>Services
 This functionality will create an instance of your required service and expose the `VCAP_SERVICES` environment variable to your application and tests.
