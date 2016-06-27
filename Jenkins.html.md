@@ -25,28 +25,21 @@ Key features of the product are:
 
 <dl>
 <dt>CloudBees Jenkins Platform for Pivotal Cloud Foundry Details</dt>
-<dd><strong>Version</strong>: 15.11.02.02 </dd>
-<dd><strong>Release Date</strong>: 8th March 2016</dd>
-<dd><strong>Software component version</strong>: CloudBees Jenkins Platform 1.642.2.1</dd>
-<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.4.x, 1.5.x</dd>
-<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.4.x, 1.5.x</dd>
+<dd><strong>Version</strong>: 15.11.02.06 </dd>
+<dd><strong>Release Date</strong>: June 23rd 2016</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins Enterprise 1.642.18.2</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins Operations Center 1.625.18.4</dd>
+<dd><strong>Compatible Ops Manager Version(s)</strong>: 1.5.x, 1.6.x, 1.7.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.5.x, 1.6.x, 1.7.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
 <dd><strong>AWS support?</strong> Yes</dd>
 </dl>
 
-### Upgrading to the Latest Version
+### Install via Pivotal Cloud Foundry Ops Manager
 
-Consider the following compatibility information before upgrading CloudBees Jenkins Platform for Pivotal Cloud Foundry.
+To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Cloud Foundry Ops Manager tiles:
 
-<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x (or higher), you must first upgrade CloudBees Jenkins Platform for Pivotal Cloud Foundry to any version in 1.3.x. This allows CloudBees Jenkins Platform for Pivotal Cloud Foundry upgrades after you install OpsManager 1.4.x. </p>
-
-For more information, refer to the full [Product Version Matrix](http://docs.pivotal.io/compatibility-matrix.pdf).
-
-### Install via Pivotal Ops Manager
-
-To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Ops Manager tiles:
-
-1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/cloudbees).
 1. Upload the product file to your Ops Manager installation.
 1. Click **Add** next to the uploaded product description in the Ops Manager `Available Products` view to add this product to your staging area.
 1. Click the newly added tile to review any configurable options.
@@ -55,14 +48,14 @@ To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the proc
 ### Dependencies
 This product requires Pivotal Cloud Foundry:
 
-* Elastic Runtime version 1.4 or greater
-* Ops Manager version 1.4 or greater
+* Elastic Runtime version 1.5 or greater
+* Ops Manager version 1.5 or greater
 
 ### Managing Jenkins
 
 #### Licensing
 
-A trial license will be created when the product is installed, which is valid for **30 days**. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. You can update the enterprise license in the Jenkins `Manage Jenkins` section when logged in as the UAA Admin user.
+A 15 days trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. You can update the enterprise license in the Jenkins `Manage Jenkins` section when logged in as the UAA Admin user.
 
 The operator's machine that is accessing the Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
 
@@ -70,30 +63,25 @@ If you are accessing Jenkins from a machine **with** internet access, a trial li
 
 If you are accessing Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
 
-Upon a trial license expiring after **30 days**, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
+Upon a trial license expiring after **15 days**, you will be presented with the `Register Jenkins` page where you can enter your updated license details if you have not already done so ahead of the expiration.
 
 #### Installation Details
 
-By default the setup is configured as one Master, with one Slave instance.
-This can be incremented in the `Resources` tab within the tile on Ops Manager.
+By default the setup is configured with:
+* 1 CloudBees Jenkins Operations Center (CJOC)
+* 1 CloudBees Jenkins Enterprise (CJE)
+* 1 slave attached to the CJE instance
+* 1 shared slave attached to the CJOC instance.
 
-Once installed, Jenkins is accessible via `http://pivotal-cloudbees.your-cf-installation.com` if you upgraded the Jenkins Product on Pivotal Cloud Foundry from an older version (13.8).
+These values can be changed in the `Resources` tab within the tile on Ops Manager.
 
-If you directly install version 14.11 or higher, Jenkins will be accessible via `http://jenkins-0.your-cf-installation.com`.
+Once installed, CJOC is accessible via `http://jenkins-oc-0.your-cf-domain.com`. From there, you will be able to access the CJE instance you defined in the tile configuration.
 
 **For technical reasons, the tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, please make sure only one is selected.**
 
-If you install more than one instance of Jenkins, the other instances will be accessible via `http://jenkins-[index].your-cf-installation.com`, where `index` is a numerical value which has as many sequential values as the number of instances generated.
-
-i.e. if you install 3 masters, then the 3 instances can be accessed via:
-
- 1. `http://jenkins-0.your-cf-installation.com`
- 1. `http://jenkins-1.your-cf-installation.com`
- 1. `http://jenkins-2.your-cf-installation.com`
-
 #### Configuration Details
 
-Jenkins will come pre-configured with:
+Slaves come pre-configured with:
 
 1. openjdk8
 1. git
@@ -101,7 +89,7 @@ Jenkins will come pre-configured with:
 1. CloudFoundry CLI
 1. buildpacks: ruby and nodejs
 
-You can modify the initial set-up simply editing the Jenkins Configuration Page. Please refer to the standard Jenkins and CJE documentation for further details.
+You can modify the initial setup simply editing the Jenkins Configuration Page. Please refer to the standard Jenkins and CJE documentation for further details.
 
 
 #### Authorization
@@ -177,33 +165,34 @@ When building your application, unless specified otherwise the generated file wi
 
 ### <a name="topology"></a>Environment Architecture
 
+#### CloudBees Jenkins Operations Center
+By default, the tile is configured to provide a CJOC instance. All masters in the tile will be linked with the CJOC instance.
+
 #### Masters
-By default we configure one Jenkins Master. You can increase this value in the `Resources` tab in Ops Manager.
-If you increase the number of Masters, you can configure them to be stand-by masters in `Configure Jenkins` this will provide high availability in the case of a master going offline, a standby master will assume control and jobs will continue to run.
+By default, one CJE instance is configured. You can increase this value in the `Resources` tab in Ops Manager.
+
+#### Shared slaves
+By defaut, one shared slave is configured in the tile. It attaches to CJOC, and can be leased to CJE instances on demand. You can increase this value in the `Resources` tab in Ops Manager.
 
 #### Slaves
 By default we configure one Jenkins Slave. You can increase this value in the `Resources` tab in Ops Manager.
 
-The more slaves you add, the more jobs you are able to run concurrently.
+The more slaves you add, the more jobs you can run concurrently.
 
 You are also able to add in existing slaves from your infrastructure that are outside of PCF, which is recommended if you would like to add slaves with architecture different than Ubuntu Trusty.
 
 You can add/disable/remove slaves, but built-in slaves  will be automatically re-created when Jenkins restarts.
 
-####Managing the Topology from GUI
+#### Managing the Topology from GUI
 
-From the Ops Manager GUI you can easily modify the number of slaves and Jenkins masters to be installed
+From the Ops Manager GUI you can easily modify the number of CJE instances, slaves and shared slaves to be installed
 
 ![Resource Configuration]
   (/images/managing-topology.png)
 
-With this configuration, the 2 Jenkins instances will be available at:
-
- 1. `http://jenkins-0.your-cf-installation.com` or `http://pivotal-cloudbees.your-cf-installation.com` (if you migrated from version 13.8)
- 1. `http://jenkins-1.your-cf-installation.com`
-
-Each of them, will have 1 online and pre-configured slave attached.
-
+With this configuration, you will access CJOC through
+`https://jenkins-oc-0.your-cf-domain.com`. It will have two shared slaves preconfigured.
+You'll have also two CJE instances pre-configured and connected to CJOC.
 
 ### Known Limitations
 
@@ -212,6 +201,8 @@ Limitations with the current CloudBees Jenkins Platform for Pivotal Cloud Foundr
 * Currently supported buildpacks are Ruby and NodeJS (this DOES NOT mean that you can't build java application though, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
 * Test services are provisioned using the `jenkins` user. This requires this user to have access through the security groups to all of the possible test services that app developers will test against.
+* The tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, please make sure only one is selected.
+
 We hope to address all of these limitations in future releases.
 
 ### Feedback
@@ -224,5 +215,6 @@ See [Release Notes](release.html)
 
 ### Further Reading
 
-* [Official CloudBees Jenkins Platform Documentation](http://wiki.cloudbees.com/bin/view/Jenkins+Enterprise/WebHome)
-* [Jenkins Open Source](http://jenkins-ci.org/)
+* [CloudBees Jenkins Operations Center documentation](https://go.cloudbees.com/docs/cloudbees-documentation/cjoc-user-guide)
+* [CloudBees Jenkins Enterprise documentation](https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide)
+* [Jenkins Open Source](http://jenkins.io)
