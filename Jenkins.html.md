@@ -25,10 +25,10 @@ Key features of the product are:
 
 <dl>
 <dt>CloudBees Jenkins Platform for Pivotal Cloud Foundry Details</dt>
-<dd><strong>Version</strong>: 15.11.02.06 </dd>
+<dd><strong>Version</strong>: v15.11.02.06 </dd>
 <dd><strong>Release Date</strong>: June 23rd 2016</dd>
-<dd><strong>Software component version</strong>: CloudBees Jenkins Enterprise 1.642.18.2</dd>
-<dd><strong>Software component version</strong>: CloudBees Jenkins Operations Center 1.625.18.4</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins Enterprise v1.642.18.2</dd>
+<dd><strong>Software component version</strong>: CloudBees Jenkins Operations Center v1.625.18.4</dd>
 <dd><strong>Compatible Ops Manager Version(s)</strong>: 1.5.x, 1.6.x, 1.7.x</dd>
 <dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.5.x, 1.6.x, 1.7.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
@@ -75,7 +75,7 @@ By default the setup is configured with the following:
 
 You can change these values in the Ops Manager **Resources** tab within the tile.
 
-Once installed, you can access CJOC at `http://jenkins-oc-0.your-cf-domain.com`. From there, you can access the CJE instance you defined in the tile configuration.
+Once installed, you can access CJOC at `http://jenkins-oc-0.your-cf-domain.example.com`. From there, you can access the CJE instance you defined in the tile configuration.
 
 <p class="note"><strong>Note</strong>: For technical reasons, the tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, select only one availability zone.</p> 
 
@@ -190,7 +190,7 @@ From the Ops Manager GUI you can modify the number of CJE instances, slaves, and
 ![Resource Configuration]
   (/images/managing-topology.png)
 
-With this configuration, you can access CJOC at `https://jenkins-oc-0.your-cf-domain.com`. It has two shared slaves preconfigured. You will have also two CJE instances pre-configured and connected to CJOC.
+With this configuration, you can access CJOC at `https://jenkins-oc-0.your-cf-domain.example.com`. It has two shared slaves preconfigured. You will have also two CJE instances pre-configured and connected to CJOC.
 
 ### Known Limitations
 
