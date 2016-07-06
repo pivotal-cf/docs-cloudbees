@@ -20,7 +20,7 @@ This guide will cover:
 5. Pushing your application
 
 ### Getting setup
-1. Log in to Jenkins at `http://jenkins-0.your-cf-installation.com` (or `http://pivotal-cloudbees.your-cf-installation.com` if you are using a backward compatible hostname).
+1. Log in to Jenkins at `http://jenkins-0.your-cf-installation.example.com` (or `http://pivotal-cloudbees.your-cf-installation.example.com` if you are using a backward compatible hostname).
 2. Click `New item` on the left hand navigation menu.
 3. Choose `Build a free-style software project`, give it a name, such as `redis-test-build`, and click `ok`.
 
@@ -71,7 +71,7 @@ Our test app uses Redis, so we'll create a test instance of this for use only in
 The CLI is provided for use in shell steps exactly the same as using it from your local machine.
 Under `Build Environment` check `Set up Cloud Foundry CLI`
 
-* **API EndPoint**: `https://api.your-cf-installation.com/`
+* **API EndPoint**: `https://api.your-cf-installation.example.com/`
 * **Skip ssl Validation**: checked if you use a self-signed/untrusted certificate
 * **API Credentials**: select your PCF/UAA Credentials (CloudFoundry CLI credentials may only be configured at the folder-level, see 'credentials' section for more details )
 * **Organization**: the organization you belong to on PCF
@@ -196,8 +196,8 @@ Using manifest file /var/vcap/store/jenkins_slave/workspace/redis-test-build/man
 Creating app redis-example-app in org development / space development as me...
 OK
 
-Using route redis-example-app.your-cf-installation.com
-Binding redis-example-app.your-cf-installation.com to redis-example-app...
+Using route redis-example-app.your-cf-installation.example.com
+Binding redis-example-app.your-cf-installation.example.com to redis-example-app...
 OK
 
 Uploading redis-example-app...
@@ -261,7 +261,7 @@ OK
 requested state: started
 instances: 1/1
 usage: 256M x 1 instances
-urls: redis-example-app.your-cf-installation.com
+urls: redis-example-app.your-cf-installation.example.com
 
      state     since                    cpu    memory          disk
 #0   running   2014-10-02 04:28:05 PM   0.0%   32.5M of 256M   46M of 1G

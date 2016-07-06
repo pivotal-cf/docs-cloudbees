@@ -27,7 +27,7 @@ You can find the Spring PetClinic Application at `https://github.com/CloudBees-c
 * Under `Build Triggers`, select `Build when a change is pushed to GitHub`.
 
 * Under `Build Environment`, check `Set up Cloud Foundry CLI`.
-  * **API EndPoint**: Use `api.your-cf-installation.com/`
+  * **API EndPoint**: Use `api.your-cf-installation.example.com/`
   * **Skip SSL Validation**: Check this.
   * **API Credentials**: Select your PCF/UAA Credentials. Note that Cloud Foundry CLI credentials can only be configured at 
   the folder-level. See the credentials section of this topic for more details.
@@ -51,7 +51,7 @@ In our example, we use insert the following: `cf push petclinic -p target/petcli
 
 ## Managing the Deployed Application
 
-After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.com/`), 
+After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.example.com/`), 
 in the organization and space that you defined in the cf CLI configuration section of this topic.
 
 ## Elastic Runtime Console
