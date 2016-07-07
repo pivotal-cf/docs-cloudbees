@@ -5,32 +5,32 @@ owner: London Services
 
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
-### 15.11.02.06: June 23rd 2016
+### v15.11.02.06: June 23rd 2016
 * Update stemcell to 3146.16
   * [USN-3001-1](http://www.ubuntu.com/usn/usn-3001-1/)
   * Nginx [CVE-2016-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4450)
 * Update CloudBees Jenkins Operations Center to 1.625.18.4. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.4)
 * Update CloudBees Jenkins Enterprise to 1.642.18.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.2)
 
-### 15.11.02.05: May 25th 2016
+### v15.11.02.05: May 25th 2016
 * Update stemcell to 3146.12
   * [USN-2977-1](http://www.ubuntu.com/usn/usn-2977-1/)
 * Update CloudBees Jenkins Operations Center to 1.625.18.3. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.3)
 
-### 15.11.02.04: May 12th 2016
+### v15.11.02.04: May 12th 2016
 * Update stemcell to 3146.11
   * [USN-2959-1](http://www.ubuntu.com/usn/usn-2959-1/)
 * Update CloudBees Jenkins Operations Center to 1.625.18.1. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.1)
 * Update CloudBees Jenkins Enterprise to 1.642.18.1. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.1)
 
 
-### 15.11.02.03: April 19th 2016
+### v15.11.02.03: April 19th 2016
 * Update stemcell to 3146.10
   * [USN-2929-1](http://www.ubuntu.com/usn/usn-2929-1/)
 * Update CloudBees Jenkins Operations Center to 1.625.16.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.16.2)
 * Update CloudBees Jenkins Enterprise to 1.642.4.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.4.2)
 
-### 15.11.02.02: March 4th 2016
+### v15.11.02.02: March 4th 2016
 * Update stemcell to 3146.9
   * [USN-2861-1](http://www.ubuntu.com/usn/usn-2861-1/)
   * [USN-2865-1](http://www.ubuntu.com/usn/usn-2865-1/)
@@ -45,26 +45,26 @@ Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](ht
 * Update CloudBees Jenkins Enterprise to 1.642.2.1. See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise)
 * Hardened https frontend settings by disabling weak ciphers.
 
-### 15.11.02.01: January 13th 2016
+### v15.11.02.01: January 13th 2016
 * Update stemcell to 3146.2
    * [USN-2857-1](http://www.ubuntu.com/usn/usn-2857-1/)
 * The tile has been renamed to CloudBees Jenkins Platform. It now includes both CloudBees Jenkins Enterprise and CloudBees Jenkins Operations Center in a single deployment.
 * Update CloudFoundry CLI to 6.14.1
 
-### 15.11.01.02: December 14th 2015
+### v15.11.01.02: December 14th 2015
 * Update stemcell to 3146
    * [USN-2821-1](http://www.ubuntu.com/usn/usn-2821-1/)
 * Update CloudBees Jenkins Enterprise to 1.625.3.1. This security release fixes [several vulnerabilities](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-12-09).
 
-### 15.11.01.01: November 27th 2015
+### v15.11.01.01: November 27th 2015
 * Update stemcell to 3140
-* Update Cloudbees Jenkins Enterprise to 15.11 (Jenkins 1.625.2.2). See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
+* Update Cloudbees Jenkins Enterprise to v15.11 (Jenkins 1.625.2.2). See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
 * Update CloudFoundry CLI to 6.14.0
 * Update versions of bundled plugins
 * Bundle Gitlab plugin
 * Fixed warning about jnlp port already in use.
 
-### 15.05.01.11: November 12th 2015
+### v15.05.01.11: November 12th 2015
 * Update stemcell to 3130 which fixes the following vulnerabilities
    * [USN-2806-1](http://www.ubuntu.com/usn/usn-2806-1/)
    * [USN-2798-1](http://www.ubuntu.com/usn/usn-2798-1/)
@@ -75,13 +75,13 @@ Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](ht
 * Disable SSLv3 support by default.
 * CloudFoundry UAA plugin now supports CLI.
 
-### 15.05.01.09: 20th October 2015
+### v15.05.01.09: 20th October 2015
 
 * Update stemcell to 3100.
 * Fixed edge case upgrade scenarios.
 * Improve supportability of the Pivotal package.
 
-### 15.05.01.08: 9th October 2015
+### v15.05.01.08: 9th October 2015
 
 Note one important known issue with the 1.5.6 patch for OpenStack deployments. BOSH stemcell v3094, which this version of Elastic Runtime references, has a limitation affecting OpenStack users only:
 
@@ -93,14 +93,14 @@ This will be fixed in the next release.
 * Update stemcell to version 3094
 * Fix an issue related to jnlp agent listener.
 
-### 15.05.01.07: 2nd October 2015
+### v15.05.01.07: 2nd October 2015
 
 * Upgrade CloudBees Jenkins Enterprise to version 1.609.3.1.
 * Minor enhancements of the setup of slaves for Docker plugins.
 * Resolve minor security vulnerabilities upgrading the stemcell to version 3074.
 * Upgrade Docker to version 1.8.2.
 
-### 15.05.01.05: 10th September 2015
+### v15.05.01.05: 10th September 2015
 
 * Fix bug in definition of Docker insecure registries and registry mirrors.
 * Resolve security vulnerabilities upgrading the stemcell to version 3062
@@ -110,7 +110,7 @@ This will be fixed in the next release.
    * [USN-2710-2](http://www.ubuntu.com/usn/USN-2710-2) OpenSSH regression
    * [USN-2718-1](http://www.ubuntu.com/usn/USN-2718-1) Linux kernel (Vivid HWE) vulnerability
 
-### 15.05.01.04: 1st September 2015
+### v15.05.01.04: 1st September 2015
 
 * Upgrade Docker to version 1.8.1.
 * Refactor Jenkins slaves configuration to make it more "Docker friendly" (replace "Slave level environment variables" by a ".bashrc" script invoked by the SSH connector).
@@ -119,24 +119,24 @@ This will be fixed in the next release.
    * JNLP port: 10000
 * Resolve security vulnerabilities upgrading the stemcell to version 3058
 
-### 15.05.01.03: 08th August 2015
+### v15.05.01.03: 08th August 2015
 
 * Fix Docker container setup on Jenkins slaves: use the ephemeral disk instead of the VM root file system.
 
 
-### 15.05.01.02: 08th August 2015
+### v15.05.01.02: 08th August 2015
 
 * Add support for docker containers on build slaves (integrated with the [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin) and the [Jenkins Docker Workflow](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Workflow+Plugin).
 * Fix [CVE-2015-3290](https://security-tracker.debian.org/tracker/CVE-2015-3290) upgrading the BOSH stemcell to version 3026.
 
-Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00.
+Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00.
 
-### 15.05.01.00: 22nd July 2015
+### v15.05.01.00: 22nd July 2015
 
-CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00 fixes the security issues
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00 fixes the security issues
 [CVE-2015-1420](http://pivotal.io/security/cve-2015-1420), [CVE-2015-1330](https://pivotal.io/security/cve-2015-1330) and [USN-2639-1](https://pivotal.io/security/usn-2639-1) thanks to the upgrade to the Bosh Stemcell 3012.
 
-Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 15.05.01.00.
+Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00.
 
 In addition, the new product version bundles the latest version of CloudBees Jenkins Enterprise [15.05 / 1.609.1.1](http://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.609.1.1).
 
@@ -148,9 +148,9 @@ Summary of features included in this release:
 **Known limitation:** the `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled. We are working on reintroducing it.
 
 
-### 14.11.01.03: 19th June 2015
+### v14.11.01.03: 19th June 2015
 
-CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; 14.11.01.03 includes a patch for
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v14.11.01.03 includes a patch for
 the Cannonical Ubuntu CVE-2015-1328 security fix. This patch resolves an overlayfs privilege
 escalation, which a local user could exploit to gain administrative privileges on the system.
 Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry&reg; is running on
