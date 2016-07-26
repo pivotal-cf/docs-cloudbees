@@ -1,5 +1,5 @@
 ---
-title: Restore CloudBees Jenkins Platform on Pivotal Cloud Foundry&reg;
+title: Restore CloudBees Jenkins Platform on Pivotal Cloud Foundry
 owner: London Services
 ---
 
@@ -23,7 +23,7 @@ This page contains a step-by-step guide you can apply to restore a Jenkins confi
 9. Run `mkdir -p /var/vcap/store`.
 10. Run `cd /var/vcap/store`.
 11. Run `unzip -X /tmp/p-jenkins-backup.zip -d .`.
-12. Start the Jenkins service using one of the following commands: 
+12. Start the Jenkins service using one of the following commands:
   * For CJOC, run `monit start jenkins-oc`.
   * For CJE, run `monit start jenkins_master`.
 13. Check the status of the Jenkins instance by browsing to it. You should see the data you have just restored.
@@ -32,7 +32,7 @@ Clean-up
 ========
 Once you have applied the previous steps successfully, clean up the temporary files you have created.
 
-On the root on the VM that you worked on, run the following commands: 
+On the root on the VM that you worked on, run the following commands:
 
-1. `rm -rf /var/vcap/store.backup` 
+1. `rm -rf /var/vcap/store.backup`
 2. `rm /tmp/p-jenkins-backup.zip`

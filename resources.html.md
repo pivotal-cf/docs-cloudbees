@@ -1,5 +1,5 @@
 ---
-title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
+title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 owner: London Services
 ---
 
@@ -78,4 +78,4 @@ The following table shows the default resource and IP requirements for installin
 #### Notes:
 * You can scale out the number of `Jenkins Slaves` in order to run more build jobs.
 * Increasing the instance count for `Jenkins Master` does not give you High Availability.
-* if you upgrade the Jenkins Product on [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF) from the older version (13.8), the persistant storage for the slaves will not be set to 0.
+* if you upgrade the Jenkins Product on [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF) from the older version (13.8), the persistant storage for the slaves will not be set to 0.

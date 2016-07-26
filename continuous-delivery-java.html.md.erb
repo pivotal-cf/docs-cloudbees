@@ -4,7 +4,7 @@ owner: London Services
 ---
 
 # Introduction
-This is a guide using CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF) and integrate with your Cloud Foundry installation.
+This is a guide using CloudBees Jenkins Enterprise for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF) and integrate with your Cloud Foundry installation.
 
 This guide covers the following topics:
 
@@ -18,8 +18,8 @@ This guide covers the following topics:
 
 * Click `new item`, give it a name, and select `Build a Maven project`. Click `OK`.
 
-* Under `Source Code Management`, select `Git`, and supply your repository URL and credentials. 
-This guide uses the Spring PetClinic Application as an example. 
+* Under `Source Code Management`, select `Git`, and supply your repository URL and credentials.
+This guide uses the Spring PetClinic Application as an example.
 You can find the Spring PetClinic Application at `https://github.com/CloudBees-community/spring-petclinic.git`
 
 <%= image_tag("../images/cd-cf-github.png") %>
@@ -29,7 +29,7 @@ You can find the Spring PetClinic Application at `https://github.com/CloudBees-c
 * Under `Build Environment`, check `Set up Cloud Foundry CLI`.
   * **API EndPoint**: Use `api.your-cf-installation.example.com/`
   * **Skip SSL Validation**: Check this.
-  * **API Credentials**: Select your PCF/UAA Credentials. Note that Cloud Foundry CLI credentials can only be configured at 
+  * **API Credentials**: Select your PCF/UAA Credentials. Note that Cloud Foundry CLI credentials can only be configured at
   the folder-level. See the credentials section of this topic for more details.
   * **Organization**: Use the organization that you belong to on PCF.
   * **Space**: Use the space in your organization where you want to deploy the application.
@@ -40,7 +40,7 @@ You can find the Spring PetClinic Application at `https://github.com/CloudBees-c
 
 * In the Build section, insert `package` as goal.
 
-* Under `Post Steps`, add an `Execute Shell` post-build step and insert `cf push APP-NAME -p PATH-TO-APP`. 
+* Under `Post Steps`, add an `Execute Shell` post-build step and insert `cf push APP-NAME -p PATH-TO-APP`.
 Replace `APP-NAME` with the name of your application.
 Replace `PATH-TO-APP` with the local path to your application, including the application itself.
 In our example, we use insert the following: `cf push petclinic -p target/petclinic.war`
@@ -51,20 +51,20 @@ In our example, we use insert the following: `cf push petclinic -p target/petcli
 
 ## Managing the Deployed Application
 
-After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.example.com/`), 
+After executing the job, the application is deployed in your Elastic Runtime environment (`https://console.your-cf-installation.example.com/`),
 in the organization and space that you defined in the cf CLI configuration section of this topic.
 
 ## Elastic Runtime Console
 
 <%= image_tag("../images/cd-cf-elastic-1.png") %>
 
-From the Pivotal Cloud Foundry&reg; Elastic Runtime Console Page, you can scale, manage, and monitor your application.
+From the Pivotal Cloud Foundry Elastic Runtime Console Page, you can scale, manage, and monitor your application.
 
 <%= image_tag("../images/cd-cf-elastic.png") %>
 
 ## Github Set Up
 
-Both the Github plugin and git are already installed in your Jenkins instance. 
+Both the Github plugin and git are already installed in your Jenkins instance.
 You must only specify the URL of the project that you want to build and deploy, and the GitHub credentials to use, if any.
 For our example, no GitHub credentials are needed.
 
@@ -77,11 +77,11 @@ For this reason, the `Add` Credentials Button in the job configuration page is d
 A user can still create credentials at the folder level, for example, in any of the job parent folders.
 Follow the step below to create credentials at the folder level:
 
-Only Administrators have the permission to create global credentials. 
-For this reason, in the job configuration page (when setting up the i.e. git project, CF CLI, ...) the `Add` Credentials Button is disabled to the user. 
-However, a non-administration user can still create credentials at folder level i.e. in any of the job parent folder. 
+Only Administrators have the permission to create global credentials.
+For this reason, in the job configuration page (when setting up the i.e. git project, CF CLI, ...) the `Add` Credentials Button is disabled to the user.
+However, a non-administration user can still create credentials at folder level i.e. in any of the job parent folder.
 The procedure is quite straightforward:
- 
+
 * Access the folder where you want to configure the credentials (i.e. CloudBees folder) and click on `Configure`
 
 <%= image_tag("../images/folder-configuration.png") %>
@@ -90,5 +90,5 @@ The procedure is quite straightforward:
 
 <%= image_tag("../images/folder-credentials.png") %>
 
-The credentials that you configure at this level are accessible by all of the jobs created in any of the child-folders of 
+The credentials that you configure at this level are accessible by all of the jobs created in any of the child-folders of
 the current one.

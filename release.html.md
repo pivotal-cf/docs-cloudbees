@@ -1,9 +1,9 @@
 ---
-title: CloudBees Jenkins Platform for Pivotal Cloud Foundry&reg;
+title: CloudBees Jenkins Platform for Pivotal Cloud Foundry
 owner: London Services
 ---
 
-Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF).
+Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ### v15.11.02.07: July 7th 2016
 * Update stemcell to 3146.17
@@ -134,14 +134,14 @@ This will be fixed in the next release.
 * Add support for docker containers on build slaves (integrated with the [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin) and the [Jenkins Docker Workflow](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Workflow+Plugin).
 * Fix [CVE-2015-3290](https://security-tracker.debian.org/tracker/CVE-2015-3290) upgrading the BOSH stemcell to version 3026.
 
-Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00.
+Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry v15.05.01.00.
 
 ### v15.05.01.00: 22nd July 2015
 
-CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00 fixes the security issues
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry v15.05.01.00 fixes the security issues
 [CVE-2015-1420](http://pivotal.io/security/cve-2015-1420), [CVE-2015-1330](https://pivotal.io/security/cve-2015-1330) and [USN-2639-1](https://pivotal.io/security/usn-2639-1) thanks to the upgrade to the Bosh Stemcell 3012.
 
-Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v15.05.01.00.
+Note that the specific version of the stemcell has to be uploaded and installed in Ops Manager, along with the installation of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry v15.05.01.00.
 
 In addition, the new product version bundles the latest version of CloudBees Jenkins Enterprise [15.05 / 1.609.1.1](http://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.609.1.1).
 
@@ -155,13 +155,13 @@ Summary of features included in this release:
 
 ### v14.11.01.03: 19th June 2015
 
-CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg; v14.11.01.03 includes a patch for
+CloudBees Jenkins Enterprise for Pivotal Cloud Foundry v14.11.01.03 includes a patch for
 the Cannonical Ubuntu CVE-2015-1328 security fix. This patch resolves an overlayfs privilege
 escalation, which a local user could exploit to gain administrative privileges on the system.
-Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry&reg; is running on
+Note that a corresponding stemcell for the specific IaaS that Pivotal Cloud Foundry is running on
 (2989) must be uploaded and installed along with this CloudBees Jenkins Enterprise release in Ops Manager.
 
-Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry&reg;
+Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 
 * Security
    * Authentication: load CF Organizations as Jenkins groups in the Cloud Foundry UAA Authentication plugin
@@ -174,7 +174,7 @@ Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal C
    * Bundle the [Jenkins Artifactory](https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin)
 * Configuration
    * Refactor Jenkins auto-configuration procedure to rely on Groovy init scripts
-   * Better ability during platform upgrades to merge user defined configuration with configuration provided by the deployments on Pivotal Cloud Foundry&reg; (JVM, slaves, tool installations...)
+   * Better ability during platform upgrades to merge user defined configuration with configuration provided by the deployments on Pivotal Cloud Foundry (JVM, slaves, tool installations...)
 
 **Known limitation:** the `test_service_instances` feature to use Cloud Foundry services bindings in builds has been temporarily disabled. We are working on reintroducing it.
 
@@ -235,7 +235,7 @@ Features included in this release:
 #### Upgrading from 1.3.0.0.alpha.107
 If you installed the beta release 1.3.0.0.alpha.107, you can upgrade to 1.3.2 following these steps:
 
-1. In Ops Manager, click the `CloudBees Jenkins for Pivotal Cloud Foundry&reg;` tile.
+1. In Ops Manager, click the `CloudBees Jenkins for Pivotal Cloud Foundry` tile.
 2. Click `Resource Config` on the left hand menu.
 3. Change the `Jenkins Slave` - `Ephemeral Disk` size to be a minimum of `8192`.
 4. Click `Save`.
