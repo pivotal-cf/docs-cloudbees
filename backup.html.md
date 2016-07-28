@@ -1,5 +1,5 @@
 ---
-title: Backup CloudBees Jenkins Platform on Pivotal Cloud Foundry&reg;
+title: Backup CloudBees Jenkins Platform on Pivotal Cloud Foundry
 owner: London Services
 ---
 
