@@ -5,6 +5,10 @@ owner: London Services
 
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
+### v16.06.01.03: October 24th 2016
+* Update stemcell to 3233.3
+  * [USN-3106-2](http://www.ubuntu.com/usn/usn-3106-2/)
+
 ### v16.06.01.02: September 14th 2016
 * Update stemcell to 3232.17
 * Fix compatibility with PCF 1.8
