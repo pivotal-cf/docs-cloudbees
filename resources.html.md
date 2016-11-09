@@ -3,7 +3,7 @@ title: CloudBees Jenkins Enterprise for Pivotal Cloud Foundry
 owner: London Services
 ---
 
-# Resource requirements
+# Resource Requirements
 The following table shows the default resource and IP requirements for installing the tile:
 
 <table border="1" class="nice">
@@ -97,9 +97,9 @@ The following table shows the default resource and IP requirements for installin
 	</tr>
 </table>
 
-#### Notes:
+#### Notes
 * You can have 0 or 1 instance of `CloudBees Jenkins Operations Center`.
 * Each `Jenkins Slave` is attached to a specific `Jenkins Master`.
-For the best usage of resources, we recommend you to use `Jenkins Shared Slaves` instead.
-These will be attached to `CloudBees Jenkins Operations Center` and leased to Masters when needed.
+For better use of resources, Pivotal recommends that you use `Jenkins Shared Slaves` instead.
+These are attached to `CloudBees Jenkins Operations Center` and leased to Masters when needed.
 * Increasing the instance count for `Jenkins Master` does not give you High Availability.

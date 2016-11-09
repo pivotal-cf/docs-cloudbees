@@ -3,11 +3,18 @@ title: CloudBees Jenkins Platform for Pivotal Cloud Foundry
 owner: London Services
 ---
 
-CloudBees Jenkins Platform can be deployed to and managed by your Pivotal Cloud Foundry environment. Deployment is automated: the topology and resourcing requirements of your setup can be changed in OpsManager to suit your needs. This product provides a pre-built configuration tailored towards Cloud Foundry integration, with common dependencies, languages, and packages already installed. Upgrades to newer versions, which include new versions of CloudBees, dependencies, and new features are seamless to install.
+CloudBees Jenkins Platform can be deployed to and managed by your Pivotal Cloud Foundry (PCF) environment. 
+Deployment is automated: the topology and resourcing requirements of your setup can be changed in OpsManager to suit your needs. 
+This product provides a pre-built configuration tailored towards Cloud Foundry integration, with common dependencies, languages, and packages already installed. 
+Upgrades to newer versions, which include new versions of CloudBees, dependencies, and new features are seamless to install.
 
-CloudBees Jenkins Platform is tightly integrated with Pivotal Cloud Foundry to provide an enhanced application developer and workflow experience. Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests, create and bind to Pivotal Cloud Foundry service instances for integration testing.
+CloudBees Jenkins Platform is tightly integrated with PCF an enhanced application developer and workflow experience. 
+Focusing on ensuring tests can be as close to the actual Cloud Foundry runtime experience as possible, to remove any discrepancies or bugs caused by differences in libraries and environments. 
+You can utilize the same build packs for Ruby & NodeJS as the runtime to run your tests, create and bind to PCF service instances for integration testing.
 
-CloudBees Jenkins Platform integrates with Cloud Foundry User Account and Authentication (UAA) to provide single sign-on functionality for users and a seamless platform experience that segregates builds by user and space for isolation and security. Upon a successful build, you can deploy applications to Cloud Foundry with a blue-green deployment strategy using the integrated CLI plugin and credentials store.
+CloudBees Jenkins Platform integrates with Cloud Foundry User Account and Authentication (UAA) to provide single sign-on functionality for users 
+and a seamless platform experience that segregates builds by user and space for isolation and security. 
+Upon a successful build, you can deploy applications to Cloud Foundry with a blue-green deployment strategy using the integrated CLI plugin and credentials store.
 
 ### Features
 
@@ -21,10 +28,10 @@ Key features of the product are:
 * [Automatic master and slave configuration](#topology)
 * [Support for Gradle wrapper and Maven](#gradle)
 
-## Product snapshot
+## Product Snapshot
 
 <dl>
-<dt>CloudBees Jenkins Platform for Pivotal Cloud Foundry Details</dt>
+<dt>CloudBees Jenkins Platform for PCF Details</dt>
 <dd><strong>Version</strong>: v15.11.02.06 </dd>
 <dd><strong>Release Date</strong>: June 23rd 2016</dd>
 <dd><strong>Software component version</strong>: CloudBees Jenkins Enterprise v1.642.18.2</dd>
@@ -35,9 +42,9 @@ Key features of the product are:
 <dd><strong>AWS support?</strong> Yes</dd>
 </dl>
 
-### Install with Pivotal Cloud Foundry Ops Manager
+### Install with PCF Ops Manager
 
-To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the procedure for installing Pivotal Cloud Foundry Ops Manager tiles:
+To install CloudBees Jenkins Platform for PCF, follow the procedure for installing PCF Ops Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/cloudbees).
 1. Upload the product file to your Ops Manager installation.
@@ -46,28 +53,31 @@ To install CloudBees Jenkins Platform for Pivotal Cloud Foundry, follow the proc
 1. Click **Apply Changes** to install the service.
 
 ### Dependencies
-This product requires Pivotal Cloud Foundry:
+This product requires PCF:
 
-* Elastic Runtime version 1.5 or greater
-* Ops Manager version 1.5 or greater
+* Elastic Runtime v1.5 or later
+* Ops Manager v1.5 or later
 
 ### Managing Jenkins
 
 #### Licensing
 
-A 15 day trial license will be created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. You can update the enterprise license in the Jenkins **Manage Jenkins** section if logged in as the UAA Admin user.
+A 15-day trial license is created when the product is installed. This needs to be replaced with your enterprise license, which should be acquired directly from CloudBees. 
+You can update the enterprise license in the Jenkins **Manage Jenkins** section if logged in as the UAA Admin user.
 
 The operator's machine that is accessing the Jenkins setup page, requires an internet connection to facilitate obtaining the trial license.
 
 If you are accessing Jenkins from a machine **with** internet access, a trial license will be automatically retrieved on the **Register Jenkins** page.
 
-If you are accessing Jenkins from a machine **without** internet access, you will need provide a valid license. Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
+If you are accessing Jenkins from a machine **without** internet access, you will need provide a valid license. 
+Trial licenses can be obtained from [CloudBees](http://www.cloudbees.com/try-jenkins-enterprise).
 
 Upon a trial license expiring after **15 days**, you will be presented with the **Register Jenkins** page where you can enter your updated license details if you have not already done so ahead of the expiration.
 
 #### Installation Details
 
 By default the setup is configured with the following:
+
 * 1 CloudBees Jenkins Operations Center (CJOC)
 * 1 CloudBees Jenkins Enterprise (CJE)
 * 1 slave attached to the CJE instance
@@ -77,7 +87,8 @@ You can change these values in the Ops Manager **Resources** tab within the tile
 
 Once installed, you can access CJOC at `http://jenkins-oc-0.your-cf-domain.example.com`. From there, you can access the CJE instance you defined in the tile configuration.
 
-<p class="note"><strong>Note</strong>: For technical reasons, the tile installation is limited to a single availability zone on AWS. When assigning availability zones to the tile, select only one availability zone.</p> 
+<p class="note"><strong>Note</strong>: For technical reasons, the tile installation is limited to a single availability zone on AWS. 
+When assigning availability zones to the tile, select only one availability zone.</p> 
 
 #### Configuration Details
 
@@ -172,7 +183,7 @@ By default, the tile is configured to provide a CJOC instance. All masters in th
 #### Masters
 By default, one CJE instance is configured. You can increase this value in the **Resources** tab in Ops Manager.
 
-#### Shared slaves
+#### Shared Slaves
 By defaut, one shared slave is configured in the tile. It attaches to CJOC, and can be leased to CJE instances on demand. You can increase this value in the **Resources** tab in Ops Manager.
 
 #### Slaves
@@ -195,7 +206,7 @@ With this configuration, you can access CJOC at `https://jenkins-oc-0.your-cf-do
 
 ### Known Limitations
 
-Limitations with the current CloudBees Jenkins Platform for Pivotal Cloud Foundry product include:
+Limitations with the current CloudBees Jenkins Platform for PCF product include:
 
 * Currently supported buildpacks are Ruby and NodeJS (this limitation does not mean that you cannot build java applications, see buildpacks section for more details)
 * The operator's machine which is logged into Ops Manager installing the tile requires an internet connection to obtain the trial license
@@ -206,7 +217,7 @@ We hope to address all of these limitations in future releases.
 
 ### Feedback
 
-Provide any bugs, feature requests, or questions to [the Pivotal Cloud Foundry Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
+Provide any bugs, feature requests, or questions to [the PCF Feedback list](mailto:pivotal-cf-feedback@pivotal.io).
 
 ### Version
 
