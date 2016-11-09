@@ -19,6 +19,17 @@ The following table shows the default resource and IP requirements for installin
 		<th>Dynamic IP</th>
 	</tr>
 	<tr>
+     		<td>CloudBees</td>
+    	 	<td>Jenkins Operations Center</td>
+    	 	<td>1</td>
+    	 	<td>2</td>
+    	 	<td>2048</td>
+    	 	<td>8192</td>
+    	 	<td>100000</td>
+    	 	<td>1</td>
+    	 	<td>0</td>
+     	</tr>
+	<tr>
  		<td>CloudBees</td>
 	 	<td>Jenkins Master</td>
 	 	<td>1</td>
@@ -40,6 +51,17 @@ The following table shows the default resource and IP requirements for installin
  		<td>1</td>
  		<td>0</td>
  	</tr>
+ 	<tr>
+        <td>CloudBees</td>
+        <td>Jenkins Shared Slave</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2048</td>
+        <td>100000</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+    </tr>
  	<tr>
  		<td>CloudBees</td>
  		<td>Compilation</td>
@@ -76,6 +98,8 @@ The following table shows the default resource and IP requirements for installin
 </table>
 
 #### Notes:
-* You can scale out the number of `Jenkins Slaves` in order to run more build jobs.
+* You can have 0 or 1 instance of `CloudBees Jenkins Operations Center`.
+* Each `Jenkins Slave` is attached to a specific `Jenkins Master`.
+For the best usage of resources, we recommend you to use `Jenkins Shared Slaves` instead.
+These will be attached to `CloudBees Jenkins Operations Center` and leased to Masters when needed.
 * Increasing the instance count for `Jenkins Master` does not give you High Availability.
-* if you upgrade the Jenkins Product on [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF) from the older version (13.8), the persistant storage for the slaves will not be set to 0.

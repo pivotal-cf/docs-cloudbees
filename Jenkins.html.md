@@ -88,6 +88,7 @@ Slaves are pre-configured with:
 * `Maven 3`
 * `Cloud Foundry CLI (cf CLI)`
 * `Ruby` and `Node.js` buildpacks
+* `Docker`
 
 You can modify the initial setup by editing the Jenkins Configuration Page. Refer to the standard Jenkins and CJE documentation for further details.
 
