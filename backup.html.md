@@ -13,7 +13,9 @@ This page contains a step-by-step guide you can apply to backup your current Jen
   We refer to this job name as `JOB_INDEX` in next steps.
 4. Run `sudo su` to switch to root user.
 5. Run `cd /var/vcap/store`
-6. Run `zip -y -r -0 /tmp/p-jenkins-store.zip *`
+6. Run the appropriate zip command
+  * For CJOC, `zip -y -r -0 /tmp/p-jenkins-store.zip jenkins-oc`
+  * For CJE, `zip -y -r -0 /tmp/p-jenkins-store.zip jenkins_master`
 7. Run `exit`
 8. Run `bosh scp $JOB_INDEX --download /tmp/p-jenkins-backup.zip .`
   A file named `p-jenkins-backup.zip.jenkins-oc.0` (or similar, depending on the job name) will be created in the current directory.
