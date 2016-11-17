@@ -7,9 +7,13 @@ Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https:/
 
 ### v16.06.01.04: November 17th 2016
 This release fixes a **critical** security vulnerability reported through our [Jenkins Security Advisory 2016-11-16](https://www.cloudbees.com/jenkins-security-advisory-2016-11-16).
+
 * Update CloudBees Jenkins Operations Center to 1.625.21.1. ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.21.1))
+
 * Update CloudBees Jenkins Enterprise to 1.651.21.1. See ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.651.21.1))
+
 * Update CloudBees Cloud Foundry CLI plugin to 2.1.3 ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Cloud+Foundry+CLI+Plugin/2.1.3))
+
 * Update Cloud Foundry UAA Authentication Plugin to 2.1.0 ([release notes](https://release-notes.cloudbees.com/release/Cloud+Foundry+UAA+Authentication+Plugin/2.1.0))
 
 ### v16.06.01.03: October 24th 2016
