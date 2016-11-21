@@ -19,7 +19,9 @@ This page contains a step-by-step guide you can apply to restore a Jenkins confi
 7. Stop the Jenkins service:
   * For CJOC, run `monit stop jenkins-oc`.
   * For CJE, run `monit stop jenkins_master`.
-8. (Optional) Run the following command to backup the previous storage: `mv /var/vcap/store /var/vcap/store.old`
+8. (Optional) Run the following command to backup the previous storage:
+  * For CJOC `mv /var/vcap/store/jenkins-oc /var/vcap/store/jenkins-oc.old`
+  * For CJE `mv /var/vcap/store/jenkins_master /var/vcap/store/jenkins_master.old`
 9. Run `mkdir -p /var/vcap/store`.
 10. Run `cd /var/vcap/store`.
 11. Run `unzip -X /tmp/p-jenkins-backup.zip -d .`.
