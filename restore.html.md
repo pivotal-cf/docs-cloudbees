@@ -5,7 +5,7 @@ owner: London Services
 
 Restore guide
 =============
-This page contains a step-by-step guide you can apply to restore a Jenkins configuration that you backed up by following the corresponding [back up guide](backup.html). It can be applied to CloudBees Jenkins Operations Center instances or to CloudBees Jenkins Enterprise instances.
+This page contains a step-by-step guide you can apply to restore a Jenkins configuration that you backed up by following the corresponding [back up guide](backup.html). You can apply this to CloudBees Jenkins Operations Center instances or to CloudBees Jenkins Enterprise instances.
 
 1. Log in to a host with access to the BOSH Director.
 2. Make sure the current `bosh deployment` targets the correct tile. Otherwise, look for the most recent manifest under `/var/tempest/workspaces/default/deployments` and `bosh deployment /var/tempest/workspaces/default/deployments/p-jenkins-xxxx.xml`.
