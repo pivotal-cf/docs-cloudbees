@@ -6,7 +6,7 @@ owner: London Services
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ### v16.06.01.05: November 23rd 2016
-* Fixes a problem in the syslog forwarder causing to fill the `/` partition.
+* Fixes a problem in the syslog forwarder that caused the `/` partition to fill.
 * Update stemcell to 3233.4
 
 ### v16.06.01.04: November 17th 2016
