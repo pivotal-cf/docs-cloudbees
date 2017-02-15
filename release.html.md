@@ -17,13 +17,13 @@ Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https:/
 ### v16.06.01.04: November 17, 2016
 This release fixes a **critical** security vulnerability reported through our [Jenkins Security Advisory 2016-11-16](https://www.cloudbees.com/jenkins-security-advisory-2016-11-16).
 
-* Update CloudBees Jenkins Operations Center to 1.625.21.1. ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.21.1))
+* Update CloudBees Jenkins Operations Center to 1.625.21.1. See ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.21.1)).
 
-* Update CloudBees Jenkins Enterprise to 1.651.21.1. See ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.651.21.1))
+* Update CloudBees Jenkins Enterprise to 1.651.21.1. See ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.651.21.1)).
 
-* Update CloudBees Cloud Foundry CLI plugin to 2.1.3 ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Cloud+Foundry+CLI+Plugin/2.1.3))
+* Update CloudBees Cloud Foundry CLI plugin to 2.1.3. See ([release notes](https://release-notes.cloudbees.com/release/CloudBees+Cloud+Foundry+CLI+Plugin/2.1.3)).
 
-* Update Cloud Foundry UAA Authentication Plugin to 2.1.0 ([release notes](https://release-notes.cloudbees.com/release/Cloud+Foundry+UAA+Authentication+Plugin/2.1.0))
+* Update Cloud Foundry UAA Authentication Plugin to 2.1.0. See ([release notes](https://release-notes.cloudbees.com/release/Cloud+Foundry+UAA+Authentication+Plugin/2.1.0)).
 
 ### v16.06.01.03: October 24, 2016
 * Update stemcell to 3233.3
@@ -35,38 +35,38 @@ This release fixes a **critical** security vulnerability reported through our [J
 
 ### v16.06.01.01: July 7, 2016
 * Update stemcell to 3232.12
-* Update CloudBees Jenkins Operations Center to 1.625.18.5. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.5)
-* Update CloudBees Jenkins Enterprise to 1.651.3.1. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.651.3.1)
+* Update CloudBees Jenkins Operations Center to 1.625.18.5. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.5)
+* Update CloudBees Jenkins Enterprise to 1.651.3.1. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.651.3.1).
 
 ### v15.11.02.07: July 7, 2016
 * Update stemcell to 3146.17
   * [USN-3020-1](http://www.ubuntu.com/usn/usn-3020-1/)
-* Update CloudBees Jenkins Enterprise to 1.642.18.3. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.3)
+* Update CloudBees Jenkins Enterprise to 1.642.18.3. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.3).
 
 ### v15.11.02.06: June 23, 2016
 * Update stemcell to 3146.16
   * [USN-3001-1](http://www.ubuntu.com/usn/usn-3001-1/)
   * Nginx [CVE-2016-4450](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4450)
-* Update CloudBees Jenkins Operations Center to 1.625.18.4. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.4)
-* Update CloudBees Jenkins Enterprise to 1.642.18.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.2)
+* Update CloudBees Jenkins Operations Center to 1.625.18.4. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.4)
+* Update CloudBees Jenkins Enterprise to 1.642.18.2. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.2).
 
 ### v15.11.02.05: May 25, 2016
 * Update stemcell to 3146.12
   * [USN-2977-1](http://www.ubuntu.com/usn/usn-2977-1/)
-* Update CloudBees Jenkins Operations Center to 1.625.18.3. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.3)
+* Update CloudBees Jenkins Operations Center to 1.625.18.3. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.3)
 
 ### v15.11.02.04: May 12, 2016
 * Update stemcell to 3146.11
   * [USN-2959-1](http://www.ubuntu.com/usn/usn-2959-1/)
-* Update CloudBees Jenkins Operations Center to 1.625.18.1. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.1)
-* Update CloudBees Jenkins Enterprise to 1.642.18.1. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.1)
+* Update CloudBees Jenkins Operations Center to 1.625.18.1. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.18.1).
+* Update CloudBees Jenkins Enterprise to 1.642.18.1. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.18.1).
 
 
 ### v15.11.02.03: April 19, 2016
 * Update stemcell to 3146.10
   * [USN-2929-1](http://www.ubuntu.com/usn/usn-2929-1/)
-* Update CloudBees Jenkins Operations Center to 1.625.16.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.16.2)
-* Update CloudBees Jenkins Enterprise to 1.642.4.2. See [full release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.4.2)
+* Update CloudBees Jenkins Operations Center to 1.625.16.2. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Operations+Center/1.625.16.2).
+* Update CloudBees Jenkins Enterprise to 1.642.4.2. See [release notes](https://release-notes.cloudbees.com/release/CloudBees+Jenkins+Enterprise/1.642.4.2).
 
 ### v15.11.02.02: March 4, 2016
 * Update stemcell to 3146.9
@@ -79,8 +79,8 @@ This release fixes a **critical** security vulnerability reported through our [J
   * [USN-2897-1](http://www.ubuntu.com/usn/usn-2897-1/)
   * [USN-2900-1](http://www.ubuntu.com/usn/usn-2900-1/)
   * [USN-2910-1](http://www.ubuntu.com/usn/usn-2910-1/)
-* Update CloudBees Jenkins Operations Center to 1.625.16.1. See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Operations+Center)
-* Update CloudBees Jenkins Enterprise to 1.642.2.1. See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise)
+* Update CloudBees Jenkins Operations Center to 1.625.16.1. See [release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Operations+Center).
+* Update CloudBees Jenkins Enterprise to 1.642.2.1. See [release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
 * Hardened https frontend settings by disabling weak ciphers.
 
 ### v15.11.02.01: January 13, 2016
@@ -96,7 +96,7 @@ This release fixes a **critical** security vulnerability reported through our [J
 
 ### v15.11.01.01: November 27, 2015
 * Update stemcell to 3140
-* Update Cloudbees Jenkins Enterprise to v15.11 (Jenkins 1.625.2.2). See [full release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
+* Update Cloudbees Jenkins Enterprise to v15.11 (Jenkins 1.625.2.2). See [release notes](http://release-notes.cloudbees.com/product/CloudBees+Jenkins+Enterprise).
 * Update CloudFoundry CLI to 6.14.0
 * Update versions of bundled plugins
 * Bundle Gitlab plugin
@@ -215,14 +215,14 @@ Major refactoring of the packaging of CloudBees Jenkins Enterprise for Pivotal C
 
 Features included in this release:
 
-* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.13.1](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.13.1) to provide security fixes for SECURITY-171, SECURITY-177 and SECURITY-180. See [Jenkins Security Advisory 2015-03-23](https://www.cloudbees.com/jenkins-security-advisory-2015-03-23)
+* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.13.1](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.13.1) to provide security fixes for SECURITY-171, SECURITY-177 and SECURITY-180. See [Jenkins Security Advisory 2015-03-23](https://www.cloudbees.com/jenkins-security-advisory-2015-03-23).
 
 ### 1.3.7
 **Release Date: March 3, 2015**
 
 Features included in this release:
 
-* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166 and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27)
+* Updated CloudBees Jenkins Enterprise to [14.11 / 1.580.12.2](http://release-notes.cloudbees.com/release/Jenkins+Enterprise/1.580.12.2) to provide security fixes for SECURITY-125, SECURITY-162, SECURITY-163, SECURITY-165, SECURITY-166 and SECURITY-167. See [Jenkins Security Advisory 2015-02-27](https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2015-02-27).
 
 ### 1.3.6
 **Release Date: February 25, 2015**
