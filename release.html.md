@@ -3,6 +3,19 @@ title: CloudBees Jenkins Platform for Pivotal Cloud Foundry
 owner: London Services
 ---
 
+<style>
+    .note.warning {
+        background-color: #fdd;
+        border-color: #fbb
+    }
+
+    .note.warning:before {
+        color: #f99;
+     }
+</style>
+
+<p class="note warning"><strong>WARNING</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
+
 Release notes for CloudBees Jenkins Platform for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ### v16.06.01.06: February 15, 2017

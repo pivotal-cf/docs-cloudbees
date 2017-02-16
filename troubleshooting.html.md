@@ -3,6 +3,19 @@ title: Troubleshooting Guide for CloudBees Jenkins Platform on Pivotal Cloud Fou
 owner: London Services
 ---
 
+<style>
+    .note.warning {
+        background-color: #fdd;
+        border-color: #fbb
+    }
+
+    .note.warning:before {
+        color: #f99;
+     }
+</style>
+
+<p class="note warning"><strong>WARNING</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
+
 This topic contains troubleshooting information for CloudBees Jenkins Platform on Pivotal Cloud Foundry (PCF).
 
 ##<a id='ssh'></a>Step 1: SSH into the VM

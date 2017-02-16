@@ -3,6 +3,19 @@ title: Back Up CloudBees Jenkins Platform on Pivotal Cloud Foundry
 owner: London Services
 ---
 
+<style>
+    .note.warning {
+        background-color: #fdd;
+        border-color: #fbb
+    }
+
+    .note.warning:before {
+        color: #f99;
+     }
+</style>
+
+<p class="note warning"><strong>WARNING</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
+
 This page contains a step-by-step guide you can apply to back up your current Jenkins configuration. You can apply this to CloudBees Jenkins Operations Center instances or to CloudBees Jenkins Enterprise instances.
 
 1. Log in to a host with access to your BOSH installation.
