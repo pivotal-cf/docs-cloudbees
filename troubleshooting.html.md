@@ -14,7 +14,7 @@ owner: London Services
      }
 </style>
 
-<p class="note warning"><strong>WARNING</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
+<p class="note warning"><strong>Note</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
 
 This topic contains troubleshooting information for CloudBees Jenkins Platform on Pivotal Cloud Foundry (PCF).
 

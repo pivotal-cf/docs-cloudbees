@@ -14,7 +14,7 @@ owner: London Services
      }
 </style>
 
-<p class="note warning"><strong>WARNING</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
+<p class="note warning"><strong>Note</strong>: CloudBees Jenkins Platform for PCF is deprecated, and no further development will be made against this tile.</p>
 
 CloudBees Jenkins Platform can be deployed to and managed by your Pivotal Cloud Foundry (PCF) environment. 
 Deployment is automated: the topology and resourcing requirements of your setup can be changed in OpsManager to suit your needs. 
